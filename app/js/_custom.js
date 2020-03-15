@@ -16,7 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const value = date.toLocaleDateString();
             input.value = value // => '1/1/2099'
         },
-        minDate: new Date(year , month, day)
+        minDate: new Date(year , month, day),
+        overlayButton: "Подтвердить",
+        customDays: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+        customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июнь','Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
     });
     //Video preview
     function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
@@ -111,5 +114,29 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.header-nav-title').text(oldTitle);
         })
     }
+    //Переключатель времени
+    const formDateInput = $('#form-date-time');
+    formDateInput.attr('data-hour','0').attr('data-minute','00');
+    let dateHour = formDateInput.attr('data-hour');
+    let dateMinute = formDateInput.attr('data-minute');
+    const maxHour = 24;
+    const minHour = 0;
+    let currentTime;
+    const changeTime = (newTime) =>{
+        currentTime = (newTime<10)?`0${dateHour}:${dateMinute}`:`${newTime}:${dateMinute}`;
+        formDateInput.val(currentTime);
+    };
+    $('.time-right').click(function () {
+        if(dateHour < maxHour){
+            dateHour++;
+            changeTime(dateHour);
+        }
+    });
+    $('.time-left').click(function () {
+       if(dateHour>0){
+           dateHour--;
+           changeTime(dateHour);
+       }
+    });
 });
 

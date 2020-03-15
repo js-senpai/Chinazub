@@ -127,12 +127,18 @@
 	<!-- Главный баннер -->
 	<section class="main-banner">
 		<div class="flex-container container-fluid">
+			<ul class="social-menu banner-social">
+				<li class="social-menu-item"><a href="#" class="fab fa-odnoklassniki"></a></li>
+				<li class="social-menu-item"><a href="#" class="fab fa-instagram"></a></li>
+				<li class="social-menu-item"><a href="#" class="fab fa-vk"></a></li>
+				<li class="social-menu-item"><a href="#" class="fab fa-facebook-f"></a></li>
+			</ul>
 			<div class="main-banner-item">
 				<h1 class="title">Стоматология г. Хэйхэ предлагает философию лечения, органично объединяющую мудрость и инновации</h1>
 				<p class="banner-text">Теперь преображение улыбки превратится для Вас в комфортное и увлекательное путешествие, наполненное приятными эмоциями и новыми впечатлениями. Теперь преображение улыбки превратится для Вас в комфортное и увлекательное путешествие, наполненное приятными эмоциями и новыми впечатлениями!</p>
 			</div>
-			<div class="main-banner-item">
-				<h3 class="slider-title"><strong>Запись</strong> на прием</h3>
+			<div class="main-banner-item banner-form">
+				<h3 class="subtitle"><strong>Запись</strong> на прием</h3>
 				<div class="custom-form form-date">
 					<div class="flex-container  form-date-inputs-container">
 						<div class="form-date-inputs">
@@ -147,15 +153,17 @@
 					<div class="flex-container custom-form form-date-inputs-container">
 						<div class="form-date-inputs">
 							<label for="form-date">Желаемая дата</label>
-							<input type="text" class="custom-form-input date" id="form-date">
+							<input type="text" class="custom-form-input date" id="form-date" placeholder="Выберите дату">
 						</div>
-						<div class="form-date-inputs">
+						<div class="form-date-inputs time">
 							<label for="form-date-time">Желамое время</label>
-							<input type="tel" class="custom-form-input telephone" id="form-date-time">
+							<input type="tel" class="custom-form-input telephone" id="form-date-time" placeholder="00:00">
+							<span class="fas fa-chevron-left time-btn time-left"></span>
+							<span class="fas fa-chevron-right time-btn time-right"></span>
 						</div>
 					</div>
 					<div class="flex-container custom-form form-date-inputs-container">
-						<button type="submit" class="btn-purple custom-form-submit">Записаться на консультацию</button>
+						<button type="submit" class="btn-purple btn-submit custom-form-submit">Записаться на консультацию</button>
 						<div class="custom-form-checkbox-container">
 							<label>
 								<input type="checkbox" class="filled-in" checked="checked" />
@@ -597,12 +605,6 @@
 		</div>
 	</div>
 </footer>
-<ul class="social-menu fixed-social">
-	<li class="social-menu-item"><a href="#" class="fab fa-odnoklassniki"></a></li>
-	<li class="social-menu-item"><a href="#" class="fab fa-instagram"></a></li>
-	<li class="social-menu-item"><a href="#" class="fab fa-vk"></a></li>
-	<li class="social-menu-item"><a href="#" class="fab fa-facebook-f"></a></li>
-</ul>
 <script src="js/scripts.min.js"></script>
 </body>
 </html>
