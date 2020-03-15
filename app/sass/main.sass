@@ -9,6 +9,14 @@ input, textarea
   outline: none
   &:focus
     color: #7c7c7c
+::-webkit-scrollbar
+  width: 5px
+::-webkit-scrollbar-track
+  background: $white
+::-webkit-scrollbar-thumb
+  background: #5f61a4
+::-webkit-scrollbar-thumb:hover
+  background: #555
 *
   margin: 0
   padding: 0
@@ -22,16 +30,17 @@ body
   margin: 0 auto
   position: relative
   overflow-x: hidden
-  color: #060606
+  color: #565656
   background-color: $white
   font-family: 'HelveticaNeueCyr', Helvetica, Arial, sans-serif
-  @include font(300,16px,24px)
+  letter-spacing: 0.02em
+  @include font(300,14px,24px)
   a
-    color: #060606
+    color: #565656
   a:hover
-    color: #DF3D3D
+    color: #ececec
   a:active
-    color: #B12C2C
+    color: #ececec
   blockquote
     margin-left: auto
     margin-right: auto
@@ -41,13 +50,15 @@ body
     background-color: #FAFAFA
     max-width: 662px
 h1
-  @include font(700,60px,48px)
+  @include font(bold,36px,36px)
 h2
-  @include font(700,30px,40px)
+  @include font(bold,36px,40px)
 h3
-  @include font(700,24px,40px)
+  @include font(bold,24px,24px)
 h4
-  @include font(700,20px,40px)
+  @include font(bold,18px,18px)
+h5
+  @include font(normal,12px,12px)
 img
   max-width: 100%
   height: auto
@@ -70,11 +81,12 @@ img
 .container-fluid
   min-width: 320px
   padding: 0 30px
-  max-width: 1140px
+  width: 100%
+  max-width: 1440px
   margin: 0 auto
 .container
   min-width: 320px
-  max-width: 1148px
+  max-width: 1380px
   padding: 0 30px
   margin: 0 auto
 //Buttons
@@ -87,7 +99,193 @@ img
   background: $purple-bg
   box-shadow: $purple-shadow
   color: $white
+.btn-circle
+  border-radius: 50%
+  width: 30px
+  height: 30px
+  line-height: 30px
+  text-align: center
+.btn-submit
+  border-radius: 50px
+  text-align: center
+  height: 50px
+  line-height: 50px
+  font-weight: bold
+  color: $white
+  &:hover
+    box-shadow: 0 0 10px 5px #e4e1e1
 //Other
 .purple-text
   color: $light-purple
+.subtitle
+  text-align: center
+  position: relative
+  &::after
+    content: ''
+    display: block
+    width: 17px
+    height: 3px
+    background: center/100% no-repeat url('../img/icons/dotted.svg')
+    margin: 25px auto 50px auto
+//Header
+#header
+  padding: 32px 0
+  &>.flex-container
+    align-items: center
+.toggle-menu
+  display: block
+  position: relative
+  width: 32px
+  height: 17px
+  background-color: transparent
+  margin-right: 5%
+  .toggle-line
+    display: block
+    width: 100%
+    height: 3px
+    background-color: #505050
+    border-radius: 1px
+    margin-bottom: 4px
+    transition: all 1s ease-in-out
+.toggle-menu:focus
+  background-color: transparent
+.toggle-menu.active
+  .toggle-line:nth-of-type(2)
+    opacity: 0
+  .toggle-line:nth-of-type(1)
+    transform: rotate(45deg)
+    margin-bottom: -10px
+  .toggle-line:nth-of-type(3)
+    transform: rotate(-45deg)
+    margin-top: 1px
+.logo-container
+  align-items: center
+.header-contacts-info
+  margin-left: 17px
+  max-width: 142px
+  font-size: 13px
+  line-height: 13px
+.logo-title
+  font-weight: bold
+  font-size: 14px
+  line-height: 14px
+.header-contacts-item
+  align-items: center
+  margin-right: 30px
+.header-contacts-item.map
+  font-size: 13px
+  line-height: 13px
+  font-weight: bold
+.header-contacts-item.graphic,.header-contacts-item.whatsapp
+  .header-contacts-icon
+    position: relative
+  a
+    display: block
+    font-weight: bold
+    letter-spacing: 0.02em
+    margin-bottom: 1px
+  span
+    color: #A2A2A2
+    font-size: 10px
+    line-height: 10px
+.header-contacts-item.graphic
+  .fas.fa-clock
+    color: #95BE94
+    position: absolute
+    bottom: -3px
+    font-size: 13px
+.header-contacts-item.whatsapp
+  .header-contacts-icon::after
+    content: ''
+    display: block
+    border: 5px solid transparent
+    border-right: 5px solid #d1a2ac
+    position: absolute
+    left: -3px
+    bottom: -5px
+    transform: rotate(-50deg)
+.header-call
+  max-width: 290px
+  width: 100%
+  cursor: pointer
+  span
+   font-family: 'HelveticaNeueCyr', Helvetica, Arial, sans-serif
+   margin-left: 7px
+//Header nav
+.header-nav
+  position: fixed
+  transition: all 1s ease-in-out
+  top: 0
+  width: 30%
+  left: -100%
+  bottom: 0
+  min-width: 320px
+  height: auto
+  background: #5F61A4
+  padding: 30px 0
+  overflow-y: auto
+  .toggle-line
+    background-color: $white
+  *
+    color: $white
+  .nav-container,.nav-menu li,.back-to-menu
+    padding: 0 30px
+.header-nav.active
+  left: 0
+.header-nav.active.active-submenu
+  background-color: #484A87
+.nav-header
+  justify-content: flex-start
+  align-items: flex-start
+.nav-header,.nav-menu
+  font-family: 'Gilroy',Helvetica, Arial, sans-serif
+  font-weight: 600
+.header-nav-title
+  display: block
+  height: 17px
+  line-height: 17px
+.nav-menu
+  margin-top: 10px
+  position: relative
+.submenu-container
+  display: none
+.nav-menu-item
+  height: 40px
+  line-height: 40px
+  font-size: 16px
+  display: flex
+  justify-content: space-between
+  align-items: center
+.nav-menu-item,.submenu-item
+  border-bottom: 1px solid #6D6FB3
+.open-submenu
+  font-size: 13px
+  cursor: pointer
+.back-to-menu
+  cursor: pointer
+  display: block
+  height: 49px
+  line-height: 49px
+  margin-top: 20px
+  background: #6D6FB2
+  color: #AFAFCD
+  &::before
+    font-size: 13px
+    margin-right: 24px
+  span
+    font-family: 'Gilroy',Helvetica, Arial, sans-serif
+    font-size: 18px
+    color: #AFAFCD
+.nav-footer
+  margin-top: 30px
+  .header-contacts-item
+    justify-content: flex-start
+    margin-bottom: 35px
+.submenu-container
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: #484A87
 @import 'media'

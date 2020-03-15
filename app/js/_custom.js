@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
     //Слайдер специалистов
-    $('.doctors-slider,.certificates-slider').slick({
+    $('.doctors-slider').slick({
         lazyLoad: 'progressive',
         infinite: true,
         slidesToShow: 4,
@@ -74,6 +74,42 @@ document.addEventListener("DOMContentLoaded", function() {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4
-    })
+    });
+    //Open menu
+    $('.toggle-menu').on('click',function(){
+        $('.toggle-menu').toggleClass('active');
+        $('.header-nav').toggleClass('active');
+    });
+    //Обвертка меню другим родителем
+    const submenu = $('.nav-menu-item .submenu');
+    if(submenu){
+        submenu.wrap('<div class="submenu-container"></div>');
+        $('.submenu').before('<span class="fas fa-angle-left back-to-menu"><span>Вернуться</span></span>');
+        const fragmentOpenSubmenu = document.createDocumentFragment();
+        const openSubmenu = document.createElement('span');
+        openSubmenu.classList.add('fas');
+        openSubmenu.classList.add('fa-chevron-right');
+        openSubmenu.classList.add('open-submenu');
+        fragmentOpenSubmenu.append(openSubmenu);
+        submenu.parent().parent().append(fragmentOpenSubmenu);
+    }
+    // Отображение подменю
+    const oldTitle = $('.header-nav-title').text();
+    if($('.open-submenu')){
+        $('.open-submenu').click(function () {
+            $('.header-nav').addClass('active-submenu');
+            let currentTitle = $(this).siblings('a').text();
+            $('.header-nav-title').text(currentTitle);
+            $(this).siblings('.submenu-container').fadeIn('slow');
+        })
+    }
+    // Закрыть подменю
+    if($('.back-to-menu')){
+        $('.back-to-menu').click(function () {
+            $('.header-nav').removeClass('active-submenu');
+            $(this).parent().fadeOut('slow');
+            $('.header-nav-title').text(oldTitle);
+        })
+    }
 });
 
