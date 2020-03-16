@@ -25,7 +25,7 @@
 					<img data-src="img/icons/logo.svg" alt="logo" class="lazy">
 				</div>
 				<div class="header-contacts-info logo-title">
-					Международная стоматологическая клиника <span class="purple-text">Ya De</span>
+					Международная стоматологическая клиника <span class="purple-content">Ya De</span>
 				</div>
 			</div>
 			<!-- Контакты в шапке -->
@@ -251,7 +251,7 @@
 	<!-- О нас -->
 	<section class="container about-us">
 		<h2 class="subtitle">О нас</h2>
-		<div class="flex-container about-us-container">
+		<div class="grid-container about-us-container">
 			<div class="about-us-item">
 				<div class="about-us-video youtube" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
 			</div>
@@ -266,8 +266,8 @@
 	<section class="advantages">
 		<div class="container">
 			<h2 class="subtitle">Преимущества</h2>
-			<div class="advantages-list">
-				<div class="flex-container advantages-list-item">
+			<div class="grid-container advantages-list">
+				<div class="grid-container advantages-list-item">
 					<div class="advantages-img">
 						<img data-src="img/_src/main/advantages/adv-1.svg" class="lazy" alt="advantages">
 					</div>
@@ -276,7 +276,7 @@
 						<p>Переживать о транспорте и гостинице также не стоит — транспорт и проживание в комфортабельном номере абсолютно бесплатны.</p>
 					</div>
 				</div>
-				<div class="flex-container advantages-list-item">
+				<div class="grid-container advantages-list-item">
 					<div class="advantages-img">
 						<img data-src="img/_src/main/advantages/adv-2.svg" class="lazy" alt="advantages">
 					</div>
@@ -285,7 +285,7 @@
 						<p>Не беспокойтесь о прохождении таможни и оформлении документов. Все заботы возьмут на себя наши сотрудники.</p>
 					</div>
 				</div>
-				<div class="flex-container advantages-list-item">
+				<div class="grid-container advantages-list-item">
 					<div class="advantages-img">
 						<img data-src="img/_src/main/advantages/adv-3.svg" class="lazy" alt="advantages">
 					</div>
@@ -299,34 +299,34 @@
 	</section>
 	<!-- Наши акции -->
 	<section class="container stocks">
-		<h2 class="subtitle">Акции</h2>
-		<div class="flex-container stocks-list">
+		<h2 class="subtitle">Наши акции</h2>
+		<div class="grid-container stocks-list">
 			<div class="stocks-list-item">
-				<div class="flex-container stock main-stocks">
+				<div class="grid-container stock main-stocks">
 					<div class="stock-item">
-						<!--<img src="" alt="">-->
+						<img data-src="img/_src/main/stocks/stock-1.png" class="lazy" alt="stock">
 					</div>
-					<div class="stock-item">
+					<div class="flex-container stock-item">
                         <strong>10-25%</strong>
 						<h4>Скидки для пенсионеров</h4>
 					</div>
 				</div>
 			</div>
 			<div class="stocks-list-item">
-				<div class="flex-container stock">
+				<div class="grid-container stock mini-stock">
 					<div class="stock-item">
-						<!--<img src="" alt="">-->
+						<img data-src="img/_src/main/stocks/stock-2.png" class="lazy" alt="stock">
 					</div>
-					<div class="stock-item">
+					<div class="flex-container  stock-item">
 						<strong>10-30%</strong>
 						<h4>Скидка для групп от 3 человек</h4>
 					</div>
 				</div>
-				<div class="flex-container stock">
+				<div class="grid-container stock mini-stock">
 					<div class="stock-item">
-						<!--<img src="" alt="">-->
+						<img data-src="img/_src/main/stocks/stock-3.png" class="lazy" alt="stock">
 					</div>
-					<div class="stock-item">
+					<div class="flex-container  stock-item">
 						<strong>20%</strong>
 						<h4>Скидка для инвалидов</h4>
 					</div>
@@ -337,6 +337,7 @@
 	<!-- Специалисты -->
 	<section class="doctors">
 		<div class="container">
+			<h2 class="subtitle">Специалисты</h2>
 			<div class="doctors-slider">
 				<div class="doctors-slider-item">
 					<div class="doctor-img">
@@ -398,18 +399,20 @@
 		</div>
 	</section>
 	<!-- Форма записи на приём -->
-	<section class="container light-form-lead flex-container">
-		<h2 class="light-form-title">Записаться на приём</h2>
-		<div class="flex-container custom-form">
-			<input type="text" class="custom-form-input telephone" placeholder="+7(___)___-__-__" required>
-			<button type="submit" class="custom-form-submit">Перезвоните мне!</button>
+	<section class="container light-form-lead">
+		<div class="grid-container light-form-lead-container">
+			<h2 class="light-form-title">Записаться на приём</h2>
+			<div class="flex-container custom-form">
+				<input type="text" class="custom-form-input telephone" placeholder="+7(___)___-__-__" required>
+				<button type="submit" class="btn-purple btn-submit custom-form-submit">Перезвоните мне!</button>
+			</div>
 		</div>
 	</section>
 	<!-- Преимущества лаборатории -->
 	<section class="advantages-lab">
 		<div class="container">
 			<h2 class="subtitle">Преимущества собственной лаборатории</h2>
-			<div class="flex-container advantages-lab-container">
+			<div class="grid-container advantages-lab-container">
 				<div class="advantages-lab-item">
 					<div class="advantages-lab-img">
 						<img data-src="img/_src/main/advantages-of-lab/adv-1.svg" class="lazy" alt="advantages">
@@ -444,7 +447,7 @@
 	<!-- Слайдер сертификатов -->
 	<section class="certificates">
 		<div class="container">
-			<h2 class="subtitle"></h2>
+			<h2 class="subtitle">Свидетельства и сертификаты клиники</h2>
 			<div class="certificates-slider">
 				<div class="cerfiticates-slider-item"><img data-lazy="img/_src/main/certificates/certificate-1.jpg" alt="cert"></div>
 				<div class="cerfiticates-slider-item"><img data-lazy="img/_src/main/certificates/certificate-2.jpg" alt="cert"></div>
@@ -460,10 +463,10 @@
 	<!-- Как мы работаем? -->
 	<section class="container how-works">
 		<h2 class="subtitle">Как мы работаем?</h2>
-		<div class="how-works-list">
+		<div class="grid-container how-works-list">
 			<div class="how-works-item">
 				<div class="how-works-number">1</div>
-				<div class="flex-container how-works-container">
+				<div class="grid-container how-works-container">
 					<div class="how-works-img">
 						<img src="img/_src/main/howwework/work-1.svg" alt="work">
 					</div>
@@ -472,7 +475,7 @@
 			</div>
 			<div class="how-works-item">
 				<div class="how-works-number">2</div>
-				<div class="flex-container how-works-container">
+				<div class="grid-container how-works-container">
 					<div class="how-works-img">
 						<img src="img/_src/main/howwework/work-2.svg" alt="work">
 					</div>
@@ -481,7 +484,7 @@
 			</div>
 			<div class="how-works-item">
 				<div class="how-works-number">3</div>
-				<div class="flex-container how-works-container">
+				<div class="grid-container how-works-container">
 					<div class="how-works-img">
 						<img src="img/_src/main/howwework/work-3.svg" alt="work">
 					</div>
@@ -490,7 +493,7 @@
 			</div>
 			<div class="how-works-item">
 				<div class="how-works-number">4</div>
-				<div class="flex-container how-works-container">
+				<div class="grid-container how-works-container">
 					<div class="how-works-img">
 						<img src="img/_src/main/howwework/work-4.svg" alt="work">
 					</div>
@@ -499,7 +502,7 @@
 			</div>
 			<div class="how-works-item">
 				<div class="how-works-number">5</div>
-				<div class="flex-container how-works-container">
+				<div class="grid-container how-works-container">
 					<div class="how-works-img">
 						<img src="img/_src/main/howwework/work-5.svg" alt="work">
 					</div>
@@ -508,7 +511,7 @@
 			</div>
 			<div class="how-works-item">
 				<div class="how-works-number">6</div>
-				<div class="flex-container how-works-container">
+				<div class="grid-container how-works-container">
 					<div class="how-works-img">
 						<img src="img/_src/main/howwework/work-6.svg" alt="work">
 					</div>
@@ -520,13 +523,13 @@
 	<!-- Форма обратной связи -->
 	<section class="bottom-lead-form">
 		<div class="container">
-			<h2 class="subtitle">Мы всегда ответим на любые вопросы!</h2>
-			<p class="bottom-lead-form">Звоните по тел.: 8 800 234-86-68, или заполните форму заявки (мы перезвоним вам):</p>
-			<div class="custom-form bottom-lead-form">
-				<div class="flex-container bottom-lead-form-inputs">
-					<input type="text" class="custom-form-input" required>
+			<h3 class="bottom-lead-form-title">Мы всегда ответим на любые вопросы!</h3>
+			<p class="bottom-lead-form-text">Звоните по тел.: <a href="tel:88002348668">8 800 234-86-68</a>, или заполните форму заявки (мы перезвоним вам):</p>
+			<div class="custom-form bottom-lead-form-container">
+				<div class="grid-container bottom-lead-form-inputs">
+					<input type="text" class="custom-form-input" placeholder="Ваше имя" required>
 					<input type="tel" class="custom-form-input telephone" placeholder="+7(___)___-__-__" required>
-					<button type="submit" class="custom-form-submit">Перезвоните мне!</button>
+					<button type="submit" class="btn-purple btn-submit custom-form-submit">Перезвоните мне!</button>
 				</div>
 				<div class="custom-form-checkbox-container">
 					<label>
@@ -539,18 +542,18 @@
 	</section>
 </main>
 <footer id="footer">
-	<div class="container flex-container">
+	<div class="container grid-container">
 		<div class="footer-item">
 			<div class="flex-container logo-container">
 				<div class="logo">
 					<img data-src="img/icons/logo.svg" alt="logo" class="lazy">
 				</div>
-				<div class="logo-title">
-					Международная стоматологическая клиника <span class="purple-text">Ya De</span>
+				<div class="header-contacts-info logo-title">
+					Международная стоматологическая клиника <span class="purple-content">Ya De</span>
 				</div>
 			</div>
 			<p class="footer-info">Принимаем оплату на карту, расчетный счет и наличными.</p>
-			<ul class="social-menu footer-social">
+			<ul class="flex-container social-menu footer-social">
 				<li class="social-menu-item"><a href="#" class="fab fa-odnoklassniki"></a></li>
 				<li class="social-menu-item"><a href="#" class="fab fa-instagram"></a></li>
 				<li class="social-menu-item"><a href="#" class="fab fa-vk"></a></li>
@@ -558,14 +561,14 @@
 			</ul>
 		</div>
 		<div class="footer-item">
-			<div class="flex-container header-contacts-item">
-				<div class="btn-pink fas fa-map-marker-alt header-contacts-icon"></div>
+			<div class="flex-container header-contacts-item map">
+				<div class="fas fa-map-marker-alt btn-pink btn-circle header-contacts-icon"></div>
 				<div class="header-contacts-info">
 					Китай, Хэйлунцзян, г. Хэйхэ, ул. Джун Ян, д. 230
 				</div>
 			</div>
-			<div class="flex-container header-contacts-item">
-				<div class="fas fa-phone-alt call btn-pink  header-contacts-icon">
+			<div class="flex-container header-contacts-item graphic">
+				<div class="fas fa-phone-alt  btn-pink btn-circle  header-contacts-icon">
 					<span class="fas fa-clock"></span>
 				</div>
 				<div class="header-contacts-info">
@@ -573,15 +576,15 @@
 					<span class="work-time">09:00 - 20:00  без выходных</span>
 				</div>
 			</div>
-			<div class="flex-container header-contacts-item">
-				<div class="fas fa-phone-alt whatsapp btn-pink header-contacts-icon"></div>
+			<div class="flex-container header-contacts-item whatsapp">
+				<div class="fas fa-phone-alt btn-pink btn-circle header-contacts-icon"></div>
 				<div class="header-contacts-info">
 					<a href="tel:+79145657888">+7 914 565-78-88</a>
 					<span class="work-time">Наш WhatsApp</span>
 				</div>
 			</div>
-			<div class="flex-container header-contacts-item">
-				<div class="fas fa-envelope btn-pink header-contacts-icon"></div>
+			<div class="flex-container header-contacts-item mail">
+				<div class="fas fa-envelope btn-pink btn-circle header-contacts-icon"></div>
 				<div class="header-contacts-info">
 					<a href="mailto:info@chinazub.com">info@chinazub.com</a>
 				</div>
@@ -602,7 +605,7 @@
 			</div>
 		</div>
 		<div class="footer-item">
-			<span class="fas fa-phone-alt btn-pink header-call clbs_show_callbaska">Заказать звонок</span>
+			<span class="fas fa-phone-alt btn-pink btn-submit header-call clbs_show_callbaska"><span>Заказать звонок</span></span>
 		</div>
 	</div>
 </footer>

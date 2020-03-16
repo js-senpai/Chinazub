@@ -49,6 +49,10 @@ body
     border-left: 5px solid #F93A3A
     background-color: #FAFAFA
     max-width: 662px
+  section
+    padding-bottom: 50px !important
+  p
+    margin-bottom: 30px
 h1
   @include font(bold,36px,36px)
 h2
@@ -84,6 +88,7 @@ img
   margin: 0 auto
 .container
   min-width: 320px
+  width: 100%
   max-width: 1380px
   padding: 0 30px
   margin: 0 auto
@@ -113,8 +118,8 @@ img
   &:hover
     box-shadow: 0 0 10px 5px #e4e1e1
 //Other
-.purple-text
-  color: $light-purple
+.purple-content
+  color: #9D9ED5
 .subtitle
   text-align: center
   position: relative
@@ -138,8 +143,10 @@ img
     border-radius: 50px
     text-align: center
     color: #999999
+    line-height: 47px
   input.custom-form-input::placeholder
     color: #999999
+    line-height: 47px
   input.custom-form-input:focus,input.custom-form-input:hover,input.custom-form-input:active
     box-shadow: 0 0 10px 5px #e4e1e1 !important
     border: none !important
@@ -212,6 +219,18 @@ img
     color: $white !important
   .qs-square.qs-disabled
     color: #949090
+//Slider
+.slider-btn
+  cursor: pointer
+  color: #8888D3
+  font-size: 40px
+  position: absolute
+  z-index: 1
+  top: 25%
+.slider-btn-left
+  left: -55px
+.slider-btn-right
+  right: -55px
 //Header
 #header
   padding: 32px 0
@@ -277,7 +296,7 @@ img
   .fas.fa-clock
     color: #95BE94
     position: absolute
-    bottom: -3px
+    bottom: 0
     font-size: 13px
 .header-contacts-item.whatsapp
   .header-contacts-icon::after
@@ -467,7 +486,7 @@ img
 .lead-banner-form-container
   background: #FAFAFF
   border-radius: 30px
-  padding: 30px 40px
+  padding: 25px 40px
   .lead-banner-form-title
     margin-top: 0
   .lead-banner-form-inputs:first-of-type
@@ -489,11 +508,293 @@ img
   width: 60%
   img
     position: absolute
-    top: 0
+    bottom: 0
     right: 0
     width: 187px
 .info-doctor-text
   color: #D4E1F4
   font-size: 14px
   line-height: 24px
+.lead-banner-info-doctor-item
+  width: 55%
+.lead-banner-info-doctor
+  margin-left: -30px
+//About us
+.about-us-container
+  grid-template-columns: repeat(2,1fr)
+.about-us-item:first-of-type
+  margin-right: 30px
+  border-radius: 30px
+  overflow: hidden
+.about-us-item
+  p
+    font-size: 18px
+    line-height: 30px
+  iframe
+    width: 100%
+    height: 100%
+.about-us-item:last-of-type
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  p:last-of-type
+    margin-bottom: 0
+.youtube
+  width: 100%
+  height: 100%
+  transition: all 200ms ease-out
+  cursor: pointer
+  display: flex
+  justify-content: center
+  align-items: center
+  .play
+    background: top center/100% no-repeat url('../img/icons/play.png')
+    width: 150px
+    height: 100px
+//Advantages
+.advantages-list
+  grid-template-columns: repeat(3,1fr)
+.advantages-list-item:not(:last-of-type)
+  margin-right: 35px
+.advantages-list-item
+  grid-template-columns: 1fr 2fr
+.advantages-text
+  font-size: 14px
+  h4
+    margin-top: 0
+    font-size: 14px
+//Stocks
+.stock
+  border-radius: 30px
+.stocks-list
+  grid-template-columns: 1.5fr 1fr
+.main-stocks
+  height: 330px
+  background: $purple-bg
+  color: $white
+  grid-template-columns: 1.1fr 1fr
+  margin-right: 30px
+  text-align: center
+  strong
+    text-shadow: 0px 20px 40px rgba(42, 42, 96, 0.3)
+    font-size: 64px
+    font-weight: bold
+    margin-bottom: 46px
+  h4
+    font-size: 36px
+    line-height: 36px
+  .stock-item
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: inherit
+  .stock-item:first-of-type
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+.mini-stock
+  background-color: #fafafa
+  padding: 0 5px
+  grid-template-columns: 1fr 1.1fr
+  strong
+    color: #5E60A3
+    font-weight: bold
+    font-size: 36px
+  h4
+    color: #000000
+    font-size: 18px
+    line-height: 18px
+  img
+    object-fit: fill
+    object-position: bottom
+    height: 100%
+    margin: 0 auto
+    display: block
+.mini-stock:last-of-type
+  strong
+    margin-right: 18px
+.mini-stock:first-of-type
+  margin-bottom: 15px
+  .stock-item
+    flex-direction: column
+    justify-content: center
+    text-align: center
+  h4
+    padding: 0 11%
+.mini-stock:last-of-type
+  .stock-item
+    align-items: center
+    text-align: center
+    strong,h4
+      height: fit-content
+//Main doctors slider
+.doctor-img
+  background-color: #fafafa
+  border-radius: 30px
+  img
+    display: block
+    margin: 0 auto
+.doctor-title
+  margin-bottom: 6px
+.doctor-subtitle
+  margin-top: 0
+  color: #999999
+  margin-bottom: 24px
+.doctor-description
+  color: #565656
+.doctors-slider-item
+  padding: 0 10px
+.doctors
+  position: relative
+//Light form lead
+.light-form-lead
+  position: relative
+  bottom: -70px
+.light-form-lead-container
+  background: #FFFFFF
+  box-shadow: 0 20px 40px rgba(135, 135, 210, 0.3)
+  border-radius: 30px
+  padding: 30px 50px
+  grid-template-columns: repeat(2,1fr)
+  .light-form-title
+    color: #333333
+    font-weight: normal
+    margin-top: 15px
+  .custom-form
+    align-items: center
+  .custom-form-input.telephone
+    max-width: 277px
+    margin-right: 30px
+    margin-bottom: 0
+  .custom-form-submit
+    max-width: 246px
+    width: 100%
+//Advantages of lab
+.advantages-lab-container
+  grid-template-columns: repeat(4,1fr)
+.advantages-lab
+  background: #FAFAFA
+  padding-top: 80px
+.advantages-lab-item
+  text-align: center
+.advantages-lab-item:not(:last-of-type)
+  margin-right: 30px
+//Certificates
+.certificates
+  position: relative
+  .slider-btn
+    top: 45%
+.cerfiticates-slider-item
+  padding: 0 10px
+//How we work
+.how-works-list
+  grid-template-columns: repeat(3,1fr)
+.how-works-item
+  margin-bottom: 30px
+  position: relative
+  background: #FAFAFA
+  border-radius: 30px
+  padding: 25px 20px
+  min-height: 130px
+.how-works-number
+  border: 5px solid $white
+  color: #FFFFFF
+  font-size: 18px
+  text-align: center
+  line-height: 26px
+  width: 36px
+  height: 36px
+  font-weight: bold
+  background: #8888D3
+  border-radius: 50%
+  position: absolute
+  top: -10px
+  left: -5px
+  box-shadow: 0 0 10px 5px #e8e6e6
+.how-works-item:not(:last-of-type)
+  margin-right: 30px
+.how-works-container
+  grid-template-columns: 1fr 2fr
+  align-items: center
+.how-works-text
+  color: #000000
+  line-height: 20px
+//Bottom lead form
+.bottom-lead-form
+  background: #FAFAFF
+  padding-top: 43px
+  padding-bottom: 80px
+.bottom-lead-form-inputs
+  grid-template-columns: 1.5fr 1.5fr 1.3fr
+  grid-column-gap: 30px
+  margin-bottom: 30px
+.bottom-lead-form-title
+  color: #000000
+  text-align: center
+  font-weight: bold
+  font-size: 24px
+  line-height: 24px
+.bottom-lead-form-text
+  color: #999999
+  font-size: 18px
+  line-height: 24px
+  text-align: center
+  margin-bottom: 63px
+//Footer
+#footer
+  background: #5E60A3
+  color: $white
+  &>.grid-container
+    grid-template-columns: 2.5fr 2.5fr 3fr 1fr 2fr
+    grid-column-gap: 30px
+.footer-item
+  padding-top: 35px
+  padding-bottom: 35px
+  .work-time
+    &::before
+      color: #95BE94
+      font-size: 18px
+    time,span
+      font-family: 'HelveticaNeueCyr', Helvetica, Arial, sans-serif
+    time
+      font-size: 13px
+    .time-info
+      font-size: 12px
+      color: #95BE94
+      margin-left: 22px
+  .logo-container
+    justify-content: flex-start
+    margin-bottom: 30px
+  .header-contacts-item
+    margin-bottom: 20px
+    justify-content: flex-start
+    a
+      color: $white
+  .header-contacts-item.mail
+    font-weight: bold
+.footer-item:nth-of-type(3)
+  background: #8888D3
+  padding-left: 20px
+  padding-right: 20px
+.footer-info
+  color: #9D9ED5
+  font-size: 12px
+  line-height: 12px
+.footer-social
+  justify-content: flex-start
+  .social-menu-item
+    margin-right: 20px
+    a
+      background: #C7C7EE
+      color: #5E60A3
+.footer-title
+  margin-top: 0
+  font-size: 18px
+  margin-bottom: 21px
+.footer-nav-item
+  a
+    font-size: 12px
+    color: $white
+    text-decoration: underline
+    line-height: 30px
 @import 'media'

@@ -1,3 +1,4 @@
+'use strict';
 document.addEventListener("DOMContentLoaded", function() {
     //Lazy Load
     let lazyLoadInstance = new LazyLoad({
@@ -21,38 +22,43 @@ document.addEventListener("DOMContentLoaded", function() {
         customDays: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
         customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июнь','Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
     });
+    if($('.youtube')){
+        $('.youtube').each(function () {
+            let youtube_url = $(this).attr('data-youtube');
+            youtube_url = youtube_url.replace('https://www.youtube.com/watch?v=','');
+            $(this).attr('data-youtube',youtube_url);
+        });
+
+    }
     //Video preview
-    function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
-    r(function(){
+    (function(){
         if (!document.getElementsByClassName) {
             // Поддержка IE8
-            const getElementsByClassName = function (node, classname) {
-                const a = [];
-                let re = new RegExp('(^| )' + classname + '( |$)');
-                const els = node.getElementsByTagName("*");
-                let i = 0, j = els.length;
-                for (; i < j; i++)
-                    if (re.test(els[i].className)) a.push(els[i]);
+            var getElementsByClassName = function(node, classname) {
+                var a = [];
+                var re = new RegExp('(^| )'+classname+'( |$)');
+                var els = node.getElementsByTagName("*");
+                for(var i=0,j=els.length; i < j; i++)
+                    if(re.test(els[i].className))a.push(els[i]);
                 return a;
-            };
+            }
             var videos = getElementsByClassName(document.body,"youtube");
         } else {
-            var videos = document.getElementsByClassName("youtube");
+            var videos = document.querySelectorAll(".youtube");
         }
-        let nb_videos = videos.length;
-        for (var i=0; i < nb_videos; i++) {
+        var nb_videos = videos.length;
+        for (let i=0; i < nb_videos; i++) {
             // Находим постер для видео, зная ID нашего видео
-            videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].id + '/sddefault.jpg)';
+            videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].dataset.youtube + '/sddefault.jpg)';
             // Размещаем над постером кнопку Play, чтобы создать эффект плеера
-            const play = document.createElement("div");
+            var play = document.createElement("div");
             play.setAttribute("class","play");
             videos[i].appendChild(play);
             videos[i].onclick = function() {
                 // Создаем iFrame и сразу начинаем проигрывать видео, т.е. атрибут autoplay у видео в значении 1
-                const iframe = document.createElement("iframe");
-                let youtube_url = this.dataset.youtube;
-                youtube_url = youtube_url.replace('https://www.youtube.com/watch?v=','');
-                let iframe_url = "https://www.youtube.com/embed/" + youtube_url + "?autoplay=1&autohide=1";
+                var iframe = document.createElement("iframe");
+                console.log(videos[i])
+                var iframe_url = "https://www.youtube.com/embed/" + videos[i].dataset.youtube + "?autoplay=1&autohide=1";
                 if (this.getAttribute("data-params")) iframe_url+='&'+this.getAttribute("data-params");
                 iframe.setAttribute("src",iframe_url);
                 iframe.setAttribute("frameborder",'0');
@@ -63,20 +69,24 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.parentNode.replaceChild(iframe, this);
             }
         }
-    });
+    })();
     //Слайдер специалистов
     $('.doctors-slider').slick({
         lazyLoad: 'progressive',
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 4
+        slidesToScroll: 4,
+        prevArrow: '<span class="fas fa-chevron-left slider-btn slider-btn-left"></span>',
+        nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>'
     });
     // Слайдер сертификатов
     $('.certificates-slider').slick({
         lazyLoad: 'progressive',
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 4
+        slidesToScroll: 4,
+        prevArrow: '<span class="fas fa-chevron-left slider-btn slider-btn-left"></span>',
+        nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>'
     });
     //Open menu
     $('.toggle-menu').on('click',function(){
