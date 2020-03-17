@@ -204,6 +204,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }else{
             $('#header .header-call span').removeClass('hidden');
         }
-    })
+    });
+    //Popup
+    const popup_container = $('.custom-popup-container');
+    $('.popup-open').click(function () {
+        popup_container.fadeIn('slow');
+    });
+    $(document).mouseup(function (e) {
+        if ($('.custom-popup').has(e.target).length === 0){
+            popup_container.fadeOut('slow');
+        }
+    });
 });
 

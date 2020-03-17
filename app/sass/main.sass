@@ -150,6 +150,9 @@ img
   input.custom-form-input:focus,input.custom-form-input:hover,input.custom-form-input:active
     box-shadow: 0 0 10px 5px #e4e1e1 !important
     border: none !important
+  .custom-form-submit
+    padding-right: 10px
+    padding-left: 10px
 .custom-form-checkbox-container
   [type=checkbox].filled-in:checked+span:not(.lever):after
     background-color: $light-purple
@@ -805,4 +808,50 @@ img
     color: $white
     text-decoration: underline
     line-height: 30px
+//Popup
+.custom-popup-container
+  display: none
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 2
+.popup-wrapper
+  width: 100%
+  height: 100%
+  justify-content: center
+  align-items: center
+.custom-popup
+  box-shadow: 0px 20px 40px rgba(135, 135, 210, 0.3)
+  background: #FFFFFF
+  border-radius: 30px
+  max-width: 320px
+  overflow: hidden
+  .custom-popup-header,.custom-form
+    padding-left: 30px
+    padding-right: 30px
+  .subtitle
+    font-weight: normal
+  .checkbox-text
+    font-size: 10px !important
+  .custom-form
+    padding-top: 35px
+    padding-bottom: 40px
+  .form-popup-inputs
+    margin-bottom: 30px
+  .custom-form-submit
+    margin-right: 0
+    width: 100%
+    margin-bottom: 40px
+.custom-popup-header
+  background: #FAFAFA
+  padding-top: 30px
+  padding-bottom: 35px
+  position: relative
+  max-height: 91px
+  .subtitle
+    margin-top: 0
+    font-size: 24px
+
 @import 'media'
