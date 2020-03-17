@@ -77,7 +77,30 @@ document.addEventListener("DOMContentLoaded", function() {
         slidesToShow: 4,
         slidesToScroll: 4,
         prevArrow: '<span class="fas fa-chevron-left slider-btn slider-btn-left"></span>',
-        nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>'
+        nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>',
+        responsive: [
+            {
+                breakpoint: 1190,
+                settings:{
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 880,
+                settings:{
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 794,
+                settings:{
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
     });
     // Слайдер сертификатов
     $('.certificates-slider').slick({
@@ -86,7 +109,30 @@ document.addEventListener("DOMContentLoaded", function() {
         slidesToShow: 4,
         slidesToScroll: 4,
         prevArrow: '<span class="fas fa-chevron-left slider-btn slider-btn-left"></span>',
-        nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>'
+        nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>',
+        responsive: [
+            {
+                breakpoint: 1190,
+                settings:{
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 880,
+                settings:{
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 794,
+                settings:{
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
     });
     //Open menu
     $('.toggle-menu').on('click',function(){
@@ -129,15 +175,13 @@ document.addEventListener("DOMContentLoaded", function() {
     formDateInput.attr('data-hour','0').attr('data-minute','00');
     let dateHour = formDateInput.attr('data-hour');
     let dateMinute = formDateInput.attr('data-minute');
-    const maxHour = 24;
-    const minHour = 0;
     let currentTime;
     const changeTime = (newTime) =>{
         currentTime = (newTime<10)?`0${dateHour}:${dateMinute}`:`${newTime}:${dateMinute}`;
         formDateInput.val(currentTime);
     };
     $('.time-right').click(function () {
-        if(dateHour < maxHour){
+        if(dateHour < 24){
             dateHour++;
             changeTime(dateHour);
         }
@@ -148,5 +192,18 @@ document.addEventListener("DOMContentLoaded", function() {
            changeTime(dateHour);
        }
     });
+    //Изменение кнопки заказа звонка
+    if($(window).width() <= 1280){
+        $('#header .header-call span').addClass('hidden');
+    }else{
+        $('#header .header-call span').removeClass('hidden');
+    }
+    $(window).resize(function(){
+        if($(window).width() <= 1280){
+            $('#header .header-call span').addClass('hidden');
+        }else{
+            $('#header .header-call span').removeClass('hidden');
+        }
+    })
 });
 

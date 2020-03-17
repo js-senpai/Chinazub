@@ -1,26 +1,200 @@
 @import "vars"
 /*==========  Desktop First  ==========*/
-@media screen and (max-width: 1150px)
-  /**/
+@media screen and (max-width: 1280px)
+  //Main page
+  #header
+    .header-call
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      text-align: center
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1190px)
-  /**/
+  //Main page
+  .banner-social
+    display: none
 @media only screen and (max-width: 1045px)
- /**/
+  //Header
+  .toggle-menu
+    margin-right: 2%
+  //Main banner
+  .main-banner .flex-container
+    flex-wrap: wrap
+  .banner-form
+    display: none
+  .main-banner-item:first-of-type
+    margin-right: 0
+    max-width: 100%
+  .lead-banner
+    flex-wrap: wrap
+  .lead-banner-info-doctor
+    margin-left: 0
+    width: 100%
+    margin-top: 35px
+  .popup-open
+    display: block
+    width: 280px
+    margin: 0 auto
+  //Stock
+  .stocks-list
+    grid-template-columns: 1fr
+  .main-stocks
+    margin-right: 0
+    margin-bottom: 22px
+  #footer>.grid-container
+    grid-template-columns: 1fr 1fr
+    justify-content: center
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 990px)
-  /**/
+@media only screen and (max-width : 995px)
+  #header
+    .header-contacts
+      display: none
+    .logo-title
+      display: none
 /* Small Devices, Tablets */
-@media only screen and (max-width : 800px)
-  /**/
+@media only screen and (max-width : 880px)
+  //Services
+  .services-item
+    box-shadow: 0 10px 20px rgba(135, 135, 210, 0.1)
+    border-radius: 30px
+    background: #FFFFFF
+  //About us
+  .about-us-container
+    grid-template-columns: 1fr
+    .youtube
+      height: 219px
+  .about-us-item:last-of-type
+    order: -1
+    margin-bottom: 30px
+  .about-us-item:first-of-type
+    margin-right: 0
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 774px)
-  /**/
+@media only screen and (max-width : 794px)
+  //Main banner
+  .title,h3
+    font-size: 18px
+  h2
+    font-size: 24px
+  .lead-banner-form
+    flex-wrap: wrap
+    justify-content: center
+    .telephone
+      margin-right: 0
+      margin-bottom: 15px
+    .lead-banner-form-inputs
+      margin-right: 0 !important
+  //Services
+  .services-container
+    grid-template-columns: 1fr 1fr
+  //Advantages
+  .advantages-list,.advantages-list-item,.advantages-lab-container
+    text-align: center
+    grid-template-columns: 1fr
+  .advantages-list-item
+    margin-right: 0 !important
+  //Advantages lab
+  .advantages-lab-item
+    margin-bottom: 20px
+  //Light form
+  .light-form-lead-container
+    grid-template-columns: 1fr
+    text-align: center
+    .custom-form
+      flex-wrap: wrap
+      justify-content: center
+    .custom-form-input.telephone
+      margin-bottom: 20px
+      margin-right: 0
+  //How works
+  .how-works-list
+    grid-template-columns: 1fr
+  .how-works-item:not(:last-of-type),.advantages-lab-item:not(:last-of-type)
+    margin-right: 0
+  //Doctors slider
+  .doctors-slider-item
+    padding: 0 30px
 @media  only screen and (max-width: 680px)
-  /**/
+  .container
+    padding-left: 10px
+    padding-right: 10px
+  //Bottom lead
+  .bottom-lead-form-inputs
+    grid-template-columns: 1fr
+  .lead-banner-form-container
+    padding-bottom: 100px
+    width: 100%
+  .lead-banner-info-doctor
+    margin-top: -70px
+  //Services
+  .mini-stock,.mini-stock .stock-item
+    height: 125px
+  .services-title
+    font-size: 12px
+    line-height: 16px
+  .services-item
+    height: 125px
+    padding-top: 10px
+  .services-title
+    padding: 0 10px 15px 10px
+    margin-top: 9px
+  .services-img
+    height: 55px
+    img
+      height: 100%
+  //Stock
+  .main-stocks
+    height: 226px
+    overflow: hidden
+    strong
+      font-size: 24px
+      margin-bottom: 0
+    h4
+      font-size: 18px
+    .stock-item:last-of-type
+      order: -1
+  .mini-stock
+    strong
+      font-size: 18px
+      line-height: 17px
+    h4
+      font-size: 14px
+      line-height: 14px
+  //Footer
+  #footer>.grid-container
+    display: flex
+    align-items: center
+    flex-direction: column
+  #footer>.container
+    padding-left: 0
+    padding-right: 0
+    width: 100%
+  #footer .header-call
+    max-width: 100%
+    margin-right: 0
+  .footer-item
+    padding-left: 20px
+    padding-right: 20px
+    width: 100%
+  .footer-item:nth-of-type(3)
+    width: 100%
+    order: 5
+  .footer-info
+    text-align: center
+  .footer-item:nth-of-type(2),.footer-item:nth-of-type(3)
+    display: flex
+    justify-content: center
+  .footer-item:nth-of-type(4)
+    display: none
+  .footer-social,#footer .logo-container
+    justify-content: center
+  .footer-item:last-of-type
+    order: 3
 /* Extra Small Devices, Phones */
 @media (max-width: 483px)
-  /**/
+  .lead-banner-info-doctor
+    padding: 10px 25px
+  .info-doctor-text
+    font-size: 12px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 375px)
  /**/
