@@ -12,7 +12,7 @@
 </head>
 <body>
 <!-- Header -->
-<header id="header">
+<header id="header" class="single-header">
 	<div class="flex-container container-fluid header-container">
 		<!-- Toggle Button -->
 		<button class="toggle-menu">
@@ -124,418 +124,323 @@
 		</div>
 </header>
 <main id="main">
-	<!-- Главный баннер -->
-	<section class="main-banner">
-		<div class="flex-container container-fluid">
-			<ul class="social-menu banner-social">
-				<li class="social-menu-item"><a href="#" class="fab fa-odnoklassniki"></a></li>
-				<li class="social-menu-item"><a href="#" class="fab fa-instagram"></a></li>
-				<li class="social-menu-item"><a href="#" class="fab fa-vk"></a></li>
-				<li class="social-menu-item"><a href="#" class="fab fa-facebook-f"></a></li>
+	<!-- Баннер услуг -->
+	<div class="service-header">
+		<div class="grid-container container">
+		<div class="flex-container service-header-item">
+			<div class="flex-container service-header-container">
+				<div class="service-img">
+					<img data-src="img/_src/main/services/services-5.svg" class="lazy" alt="service">
+				</div>
+				<div class="service-titles">
+					<h1 class="subtitle">Отбеливание</h1>
+					<a href="#" class="service-more">Все услуги</a>
+				</div>
+			</div>
+			<ul class="flex-container service-links">
+				<li class="service-links-item" data-tab="otb">Про отбеливание</li>
+				<li class="service-links-item" data-tab="photo">Фото</li>
+				<li class="service-links-item" data-tab="review">Отзывы</li>
+				<li class="service-links-item" data-tab="faq">FAQ</li>
+				<li class="service-links-item" data-tab="zap">Запись онлайн</li>
 			</ul>
-			<div class="main-banner-item">
-				<h1 class="title">Стоматология г. Хэйхэ предлагает философию лечения, органично объединяющую мудрость и инновации</h1>
-				<p class="banner-text">Теперь преображение улыбки превратится для Вас в комфортное и увлекательное путешествие, наполненное приятными эмоциями и новыми впечатлениями. Теперь преображение улыбки превратится для Вас в комфортное и увлекательное путешествие, наполненное приятными эмоциями и новыми впечатлениями!</p>
-			</div>
-			<div class="main-banner-item banner-form">
-				<h3 class="subtitle"><strong>Запись</strong> на прием</h3>
-				<div class="custom-form form-date">
-					<div class="flex-container  form-date-inputs-container">
-						<div class="form-date-inputs">
-							<label for="form-date-name">Ваше имя</label>
-							<input type="text" class="custom-form-input" id="form-date-name" placeholder="Иван Иванов">
-						</div>
-						<div class="form-date-inputs">
-							<label for="form-date-tel">Номер вашего телефона</label>
-							<input type="tel" class="custom-form-input telephone" id="form-date-tel" placeholder="+7(___)___-__-__">
-						</div>
+		</div>
+		<div class="service-header-item">
+			<img src="img/_src/services/header/image.png" alt="service">
+		</div>
+		</div>
+	</div>
+	<!-- Блок о услугах -->
+	<section class="about-service" id="otb">
+		<div class="container">
+			<p>Профессиональное отбеливание в Государственной стоматологической клинике г. Хэйхэ позволяет освежить цвет зубов, сохранить целостность эмали, придать лицу свежесть и цветущий вид, а пациенту молодость и ухоженность.</p>
+			<p>Оптимальный способ сделать улыбку белоснежной подбирает врач после осмотра и сбора анамнеза. Также учитываются пожелания пациента — информация, озвученная доктором, доносится через профессионального переводчика.</p>
+			<div class="grid-container service-list">
+				<div class="service-list-item">
+					<h3 class="service-list-title">Отбеливание зубов Zoom</h3>
+					<div class="service-list-img">
+						<img src="img/_src/services/about/about-1.jpg" alt="">
 					</div>
-					<div class="flex-container custom-form form-date-inputs-container">
-						<div class="form-date-inputs">
-							<label for="form-date">Желаемая дата</label>
-							<input type="text" class="custom-form-input date" id="form-date" placeholder="Выберите дату">
-						</div>
-						<div class="form-date-inputs time">
-							<label for="form-date-time">Желамое время</label>
-							<input type="tel" class="custom-form-input telephone" id="form-date-time" placeholder="00:00">
-							<span class="fas fa-chevron-left time-btn time-left"></span>
-							<span class="fas fa-chevron-right time-btn time-right"></span>
-						</div>
+					<div class="service-list-content">
+						<p>Система фотоотбеливания четвертого поколения значительно усовершенствована по сравнению с предыдущими. Она безопасна для здоровья зубов (при условии применения грамотным специалистом), осветляет эмаль на 2−8 тонов за один сеанс.</p>
+						<p>Гель на основе перекиси водорода и щелочи активируется под УФ-лампой — такой метод дает эффект закрепления нового цвета. Последующая реминерализация — часть системы отбеливания зубов Zoom-4. Она восстанавливает эмаль, снижает чувствительность костных тканей. По окончании процедуры пациенту даются рекомендации, как сохранить новоприобретенный оттенок максимально долго.</p>
 					</div>
-					<div class="flex-container custom-form form-date-inputs-container">
-						<button type="submit" class="btn-purple btn-submit custom-form-submit">Записаться на консультацию</button>
-						<div class="custom-form-checkbox-container">
-							<label>
-								<input type="checkbox" class="filled-in" checked="checked" required />
-								<span>Согласен с политикой конфиденциальности</span>
-							</label>
+					<div class="service-list-info">
+						<div class="flex-container service-list-info-item">
+							<div class="service-list-info-name">Первичный осмотр, консультация </div>
+							<div class="service-list-info-dots"></div>
+							<div class="service-list-info-price">Бесплатно!</div>
+						</div>
+						<div class="flex-container service-list-info-item">
+							<div class="service-list-info-name">Отбеливание зубов Zoom</div>
+							<div class="service-list-info-dots"></div>
+							<div class="service-list-info-price">2500 рублей!</div>
 						</div>
 					</div>
 				</div>
-				<div class="form-date-thx">
-					<p class="form-date-thx-text">Спасибо за оформление заявки! Мы скоро с вами свяжемся.</p>
+				<div class="service-list-item">
+					<h3 class="service-list-title">Лазерное отбеливание</h3>
+					<div class="service-list-img">
+						<img src="img/_src/services/about/about-2.jpg" alt="">
+					</div>
+					<div class="service-list-content">
+						<p>Метод предполагает химическое воздействие специальным гелем на основе пероксида водорода. Реакцию эмали с ним усиливает луч лазера. Традиционные методики действуют от часа до двух, лазерное отбеливание справляется за 40 минут.</p>
+						<p>Ньюанс! Аппарат позволяет точно контролировать интенсивность и глубину воздействия на каждую зубную единицу. В результате достигается полностью равномерный цвет эмали, что не всегда возможно при помощи других методик.</p>
+					</div>
+					<div class="service-list-info">
+						<div class="flex-container service-list-info-item">
+							<div class="service-list-info-name">Первичный осмотр, консультация </div>
+							<div class="service-list-info-dots"></div>
+							<div class="service-list-info-price">Бесплатно!</div>
+						</div>
+						<div class="flex-container service-list-info-item">
+							<div class="service-list-info-name">Лазерное отбеливание зубов</div>
+							<div class="service-list-info-dots"></div>
+							<div class="service-list-info-price">1500 рублей</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<span  class="btn-purple btn-submit popup-open">Записаться на консультацию</span>
+			<h3>Преимущества поездки в г. Хэйхэ</h3>
+			<p>Государственная стоматологическая клиника г. Хэйхэ расположена в китайской провинции, прилегающей к границам Забайкалья, Амурской области, ЕАО, Приморского и Хабаровского края. Сюда удобно добираться жителем этих регионов, а цена билета из европейской части России полностью отбивается за счет экономии на стоматологических услугах.</p>
+			<p>Важно, что недорогой прайс на профессиональное отбеливание — не следствие низкого качества услуг, а государственная политика в Китае, соблюдению которой уделяется много внимания. Стоматологи работают на материалах из Германии, США, Японии, Швеции, с соблюдением общемировых стандартов лечения, по европейским технологиям.</p>
+			<ul>
+				<li>5 докторов медицинских наук;</li>
+				<li>8 кандидатов наук;</li>
+				<li>18 аспирантов;</li>
+			</ul>
+			<p>Высококвалифицированный штат медиков с большим опытом.</p>
 		</div>
 	</section>
-	<!-- Услуги -->
-	<section class="container services">
-		<h2 class="subtitle">Услуги</h2>
-		<div class="grid-container services-container">
-			<div class="services-item">
-				<div class="services-img">
-					<img data-src="img/_src/main/services/services-1.svg" class="lazy" alt="services">
-				</div>
-				<h4 class="services-title">Терапевтическая стоматология</h4>
-			</div>
-			<div class="services-item">
-				<div class="services-img">
-					<img data-src="img/_src/main/services/services-2.svg" class="lazy" alt="services">
-				</div>
-				<h4 class="services-title">Хирургическая стоматология</h4>
-			</div>
-			<div class="services-item">
-				<div class="services-img">
-					<img data-src="img/_src/main/services/services-3.svg" class="lazy" alt="services">
-				</div>
-				<h4 class="services-title">Парадонтология</h4>
-			</div>
-			<div class="services-item">
-				<div class="services-img">
-					<img data-src="img/_src/main/services/services-4.svg" class="lazy" alt="services">
-				</div>
-				<h4 class="services-title">Профилактическая стоматология</h4>
-			</div>
-			<div class="services-item">
-				<div class="services-img">
-					<img data-src="img/_src/main/services/services-5.svg" class="lazy" alt="services">
-				</div>
-				<h4 class="services-title">Отбеливание</h4>
-			</div>
-			<div class="services-item">
-				<div class="services-img">
-					<img data-src="img/_src/main/services/services-6.svg" class="lazy" alt="services">
-				</div>
-				<h4 class="services-title">Эстетическая стоматология</h4>
-			</div>
-			<div class="services-item">
-				<div class="services-img">
-					<img data-src="img/_src/main/services/services-7.svg" class="lazy" alt="services">
-				</div>
-				<h4 class="services-title">Ортодонтическая стоматология</h4>
-			</div>
-		</div>
-	</section>
-	<!-- Форма обратного звонка-->
-	<section class="container flex-container lead-banner">
-		<div class="lead-banner-form-container">
-			<h3 class="lead-banner-form-title">Мы всегда ответим на любые вопросы!</h3>
-			<p class="lead-banner-text">Оставьте свой номер телефона, что бы записаться на приём, договориться о дате и времени консультации, или задать любые вопросы</p>
-			<div class="flex-container custom-form lead-banner-form">
-				<div class="lead-banner-form-inputs">
-					<input type="tel" class="custom-form-input telephone" placeholder="+7(___)___-__-__" required>
-				</div>
-				<div class="lead-banner-form-inputs">
-                    <button type="submit" class="btn-purple btn-submit custom-form-submit">Перезвоните мне!</button>
-				</div>
-			</div>
-		</div>
-		<div class="flex-container lead-banner-info-doctor">
-			<div class="lead-banner-info-doctor-item">
-				<h3 class="info-doctor-title">Guan Peng</h3>
-				<p class="info-doctor-text">Главный врач, врач высшей категории, профессор, кандидат медицинских наук.</p>
-			</div>
-			<img data-src="img/_src/specialists/doctor-1.png" class="lazy" alt="doctor">
-		</div>
-	</section>
-	<!-- О нас -->
-	<section class="container about-us">
-		<h2 class="subtitle">О нас</h2>
-		<div class="grid-container about-us-container">
-			<div class="about-us-item">
-				<div class="about-us-video youtube" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
-			</div>
-			<div class="about-us-item">
-				<p>Мы используем высококачественные материалы и оборудование итальянских, немецких и швейцарских производителей. Также наши сотрудники регулярно проходят стажировку у ведущих зарубежных специалистов, сохраняя высокое качество стоматологической практики.</p>
-				<p>При этом мы стараемся придерживаться сдержанной ценовой политики, что выгодно отличает нашу клинику от российских учреждений.</p>
-				<p>Многолетний практический опыт совместно с инновационными методами лечения создают прекрасную основу для лечения и восстановления зубов. А гостеприимство и атмосфера превращает лечение в комфортный отдых!</p>
-			</div>
-		</div>
-	</section>
-	<!-- Преимущества -->
-	<section class="advantages">
+	<!-- Блок До/После -->
+	<section class="service-gallery" id="photo">
 		<div class="container">
-			<h2 class="subtitle">Преимущества</h2>
-			<div class="grid-container advantages-list">
-				<div class="grid-container advantages-list-item">
-					<div class="advantages-img">
-						<img data-src="img/_src/main/advantages/adv-1.svg" class="lazy" alt="advantages">
-					</div>
-					<div class="advantages-text">
-						<h4>Транспортная доступность и высокое качество лечения и протезирования</h4>
-						<p>Переживать о транспорте и гостинице также не стоит — транспорт и проживание в комфортабельном номере абсолютно бесплатны.</p>
-					</div>
-				</div>
-				<div class="grid-container advantages-list-item">
-					<div class="advantages-img">
-						<img data-src="img/_src/main/advantages/adv-2.svg" class="lazy" alt="advantages">
-					</div>
-					<div class="advantages-text">
-						<h4>Особое положение гостей исключает необходимость оформления визы, что значительно упрощает проезд</h4>
-						<p>Не беспокойтесь о прохождении таможни и оформлении документов. Все заботы возьмут на себя наши сотрудники.</p>
-					</div>
-				</div>
-				<div class="grid-container advantages-list-item">
-					<div class="advantages-img">
-						<img data-src="img/_src/main/advantages/adv-3.svg" class="lazy" alt="advantages">
-					</div>
-					<div class="advantages-text">
-						<h4>Отсутствие языкового барьера</h4>
-						<p>неотъемлемое условие достижение высокого результата. Переводчик будет сопровождать вас от границы и на всех этапах выздоровления.</p>
-					</div>
-				</div>
+			<h2 class="subtitle">Фото “до и после”</h2>
+			<div class="service-gallery-list">
+				<a href="img/_src/services/beforeafter/after-1.jpg" class="fancybox-button service-gallery-button">
+					<img data-src="img/_src/services/beforeafter/after-1.jpg" class="lazy" alt="after">
+				</a>
+				<a href="img/_src/services/beforeafter/after-2.jpg" class="fancybox-button service-gallery-button">
+					<img data-src="img/_src/services/beforeafter/after-2.jpg" class="lazy" alt="after">
+				</a>
+				<a href="img/_src/services/beforeafter/after-3.jpg" class="fancybox-button service-gallery-button">
+					<img data-src="img/_src/services/beforeafter/after-3.jpg" class="lazy" alt="after">
+				</a>
+				<a href="img/_src/services/beforeafter/after-4.jpg" class="fancybox-button service-gallery-button">
+					<img data-src="img/_src/services/beforeafter/after-4.jpg" class="lazy" alt="after">
+				</a>
+				<a href="img/_src/services/beforeafter/after-5.jpg" class="fancybox-button service-gallery-button">
+					<img data-src="img/_src/services/beforeafter/after-5.jpg" class="lazy" alt="after">
+				</a>
+				<a href="img/_src/services/beforeafter/after-6.jpg" class="fancybox-button service-gallery-button">
+					<img data-src="img/_src/services/beforeafter/after-6.jpg" class="lazy" alt="after">
+				</a>
+				<a href="img/_src/services/beforeafter/after-7.jpg" class="fancybox-button service-gallery-button">
+					<img data-src="img/_src/services/beforeafter/after-7.jpg" class="lazy" alt="after">
+				</a>
+				<a href="img/_src/services/beforeafter/after-8.jpg" class="fancybox-button service-gallery-button">
+					<img data-src="img/_src/services/beforeafter/after-8.jpg" class="lazy" alt="after">
+				</a>
 			</div>
+			<span class="btn-radius service-gallery-more">Больше наших фото</span>
 		</div>
 	</section>
-	<!-- Наши акции -->
-	<section class="container stocks">
-		<h2 class="subtitle">Наши акции</h2>
-		<div class="grid-container stocks-list">
-			<div class="stocks-list-item">
-				<div class="grid-container stock main-stocks">
-					<div class="stock-item">
-						<img data-src="img/_src/main/stocks/stock-1.png" class="lazy" alt="stock">
-					</div>
-					<div class="flex-container stock-item">
-                        <strong>10-25%</strong>
-						<h4>Скидки для пенсионеров</h4>
-					</div>
-				</div>
-			</div>
-			<div class="stocks-list-item">
-				<div class="grid-container stock mini-stock">
-					<div class="stock-item">
-						<img data-src="img/_src/main/stocks/stock-2.png" class="lazy" alt="stock">
-					</div>
-					<div class="flex-container  stock-item">
-						<strong>10-30%</strong>
-						<h4>Скидка для групп от 3 человек</h4>
-					</div>
-				</div>
-				<div class="grid-container stock mini-stock">
-					<div class="stock-item">
-						<img data-src="img/_src/main/stocks/stock-3.png" class="lazy" alt="stock">
-					</div>
-					<div class="flex-container  stock-item">
-						<strong>20%</strong>
-						<h4>Скидка для инвалидов</h4>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Специалисты -->
-	<section class="doctors">
+	<section class="service-reviews" id="review">
 		<div class="container">
-			<h2 class="subtitle">Специалисты</h2>
-			<div class="doctors-slider">
-				<div class="doctors-slider-item">
-					<div class="doctor-img">
-						<img data-lazy="img/_src/specialists/doctor-1.png" alt="doctor">
+			<h2 class="subtitle">Отзывы</h2>
+			<div class="reviews-slider">
+				<div class="grid-container review-container">
+					<div class="review-item">
+						<div class="youtube review-video" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
 					</div>
-					<h3 class="doctor-title">Guan Peng</h3>
-					<h5 class="doctor-subtitle">Опыт работы: 38 лет</h5>
-					<p class="doctor-description">Главный врач, врач высшей категории, профессор, кандидат медицинских наук.</p>
+					<div class="review-item">
+						<h4 class="review-name">Петр Аганесян</h4>
+						<h5 class="review-city">г. Благовещенск</h5>
+						<div class="review-gallery">
+							<div class="review-gallery-item">
+								<img src="img/_src/review/after.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/after.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/before.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/before.jpg" alt="review">
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="doctors-slider-item">
-					<div class="doctor-img">
-						<img data-lazy="img/_src/specialists/doctor-2.png" calt="doctor">
+				<div class="grid-container review-container">
+					<div class="review-item">
+						<div class="youtube review-video" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
 					</div>
-					<h3 class="doctor-title">Guan Peng</h3>
-					<h5 class="doctor-subtitle">Опыт работы: 38 лет</h5>
-					<p class="doctor-description">Главный врач, врач высшей категории, профессор, кандидат медицинских наук.</p>
+					<div class="review-item">
+						<h4 class="review-name">Петр Аганесян</h4>
+						<h5 class="review-city">г. Благовещенск</h5>
+						<div class="review-gallery">
+							<div class="review-gallery-item">
+								<img src="img/_src/review/after.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/after.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/before.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/before.jpg" alt="review">
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="doctors-slider-item">
-					<div class="doctor-img">
-						<img data-lazy="img/_src/specialists/doctor-3.png"  alt="doctor">
+				<div class="grid-container review-container">
+					<div class="review-item">
+						<div class="youtube review-video" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
 					</div>
-					<h3 class="doctor-title">Guan Peng</h3>
-					<h5 class="doctor-subtitle">Опыт работы: 38 лет</h5>
-					<p class="doctor-description">Главный врач, врач высшей категории, профессор, кандидат медицинских наук.</p>
+					<div class="review-item">
+						<h4 class="review-name">Петр Аганесян</h4>
+						<h5 class="review-city">г. Благовещенск</h5>
+						<div class="review-gallery">
+							<div class="review-gallery-item">
+								<img src="img/_src/review/after.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/after.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/before.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/before.jpg" alt="review">
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="doctors-slider-item">
-					<div class="doctor-img">
-						<img data-lazy="img/_src/specialists/doctor-4.png"  alt="doctor">
+				<div class="grid-container review-container">
+					<div class="review-item">
+						<div class="youtube review-video" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
 					</div>
-					<h3 class="doctor-title">Guan Peng</h3>
-					<h5 class="doctor-subtitle">Опыт работы: 38 лет</h5>
-					<p class="doctor-description">Главный врач, врач высшей категории, профессор, кандидат медицинских наук.</p>
+					<div class="review-item">
+						<h4 class="review-name">Петр Аганесян</h4>
+						<h5 class="review-city">г. Благовещенск</h5>
+						<div class="review-gallery">
+							<div class="review-gallery-item">
+								<img src="img/_src/review/after.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/after.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/before.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/before.jpg" alt="review">
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="doctors-slider-item">
-					<div class="doctor-img">
-						<img data-lazy="img/_src/specialists/doctor-5.png" alt="doctor">
+				<div class="grid-container review-container">
+					<div class="review-item">
+						<div class="youtube review-video" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
 					</div>
-					<h3 class="doctor-title">Guan Peng</h3>
-					<h5 class="doctor-subtitle">Опыт работы: 38 лет</h5>
-					<p class="doctor-description">Главный врач, врач высшей категории, профессор, кандидат медицинских наук.</p>
-				</div>
-				<div class="doctors-slider-item">
-					<div class="doctor-img">
-						<img data-lazy="img/_src/specialists/doctor-6.png" alt="doctor">
+					<div class="review-item">
+						<h4 class="review-name">Петр Аганесян</h4>
+						<h5 class="review-city">г. Благовещенск</h5>
+						<div class="review-gallery">
+							<div class="review-gallery-item">
+								<img src="img/_src/review/after.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/after.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/before.jpg" alt="review">
+							</div>
+							<div class="review-gallery-item">
+								<img src="img/_src/review/before.jpg" alt="review">
+							</div>
+						</div>
 					</div>
-					<h3 class="doctor-title">Guan Peng</h3>
-					<h5 class="doctor-subtitle">Опыт работы: 38 лет</h5>
-					<p class="doctor-description">Главный врач, врач высшей категории, профессор, кандидат медицинских наук.</p>
-				</div>
-				<div class="doctors-slider-item">
-					<div class="doctor-img">
-						<img data-lazy="img/_src/specialists/doctor-7.png" alt="doctor">
-					</div>
-					<h3 class="doctor-title">Guan Peng</h3>
-					<h5 class="doctor-subtitle">Опыт работы: 38 лет</h5>
-					<p class="doctor-description">Главный врач, врач высшей категории, профессор, кандидат медицинских наук.</p>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- Форма записи на приём -->
-	<section class="container light-form-lead">
-		<div class="grid-container light-form-lead-container">
-			<h2 class="light-form-title">Записаться на приём</h2>
-			<div class="flex-container custom-form">
-				<input type="text" class="custom-form-input telephone" placeholder="+7(___)___-__-__" required>
-				<button type="submit" class="btn-purple btn-submit custom-form-submit">Перезвоните мне!</button>
-			</div>
-		</div>
+	<section class="container service-faq" id="faq">
+			<h2 class="subtitle">FAQ</h2>
+			<ul class="collapsible faq-list">
+				<li class="faq-list-item">
+					<div class="collapsible-header"><i class="fas fa-chevron-down"></i>Как добраться до г. Хэйхэ?</div>
+					<div class="collapsible-body">
+						<p>Проезд до нас очень прост! Заранее свяжитесь с нами любым для вас удобным способом (указанным на сайте) и сообщите время вашего прибытия. По приезду в г. Благовещенск вас встретит наш сотрудник и отвезёт на таможню. Поможет вам приобрести билеты на проезд, заполнить миграционную карту.</p>
+						<p>Билеты до г. Хэйхэ и обратно до г. Благовещенска за счёт клиники.</p>
+						<p>Расстояние между г. Благовещенском и г. Хэйхэ не больше 1 километра, прохождение таможни не займёт много времени. После прохождения китайской таможни вас встретит наш сотрудник и отвезёт в отель для заселения. Отель на всё время лечения предоставляется бесплатно. После заселения в отель, в рабочее время Вас отвезут на первичный приём в клинику.</p>
+					</div>
+				</li>
+				<li class="faq-list-item">
+					<div class="collapsible-header"><i class="fas fa-chevron-down"></i>Кто встретит меня на границе?</div>
+					<div class="collapsible-body">
+						<p>Проезд до нас очень прост! Заранее свяжитесь с нами любым для вас удобным способом (указанным на сайте) и сообщите время вашего прибытия. По приезду в г. Благовещенск вас встретит наш сотрудник и отвезёт на таможню. Поможет вам приобрести билеты на проезд, заполнить миграционную карту.</p>
+						<p>Билеты до г. Хэйхэ и обратно до г. Благовещенска за счёт клиники.</p>
+						<p>Расстояние между г. Благовещенском и г. Хэйхэ не больше 1 километра, прохождение таможни не займёт много времени. После прохождения китайской таможни вас встретит наш сотрудник и отвезёт в отель для заселения. Отель на всё время лечения предоставляется бесплатно. После заселения в отель, в рабочее время Вас отвезут на первичный приём в клинику.</p>
+					</div>
+				</li>
+				<li class="faq-list-item">
+					<div class="collapsible-header"><i class="fas fa-chevron-down"></i>Билеты за чей счёт?</div>
+					<div class="collapsible-body">
+						<p>Проезд до нас очень прост! Заранее свяжитесь с нами любым для вас удобным способом (указанным на сайте) и сообщите время вашего прибытия. По приезду в г. Благовещенск вас встретит наш сотрудник и отвезёт на таможню. Поможет вам приобрести билеты на проезд, заполнить миграционную карту.</p>
+						<p>Билеты до г. Хэйхэ и обратно до г. Благовещенска за счёт клиники.</p>
+						<p>Расстояние между г. Благовещенском и г. Хэйхэ не больше 1 километра, прохождение таможни не займёт много времени. После прохождения китайской таможни вас встретит наш сотрудник и отвезёт в отель для заселения. Отель на всё время лечения предоставляется бесплатно. После заселения в отель, в рабочее время Вас отвезут на первичный приём в клинику.</p>
+					</div>
+				</li>
+				<li class="faq-list-item">
+					<div class="collapsible-header"><i class="fas fa-chevron-down"></i>Отель для клиентов бесплатный?</div>
+					<div class="collapsible-body">
+						<p>Проезд до нас очень прост! Заранее свяжитесь с нами любым для вас удобным способом (указанным на сайте) и сообщите время вашего прибытия. По приезду в г. Благовещенск вас встретит наш сотрудник и отвезёт на таможню. Поможет вам приобрести билеты на проезд, заполнить миграционную карту.</p>
+						<p>Билеты до г. Хэйхэ и обратно до г. Благовещенска за счёт клиники.</p>
+						<p>Расстояние между г. Благовещенском и г. Хэйхэ не больше 1 километра, прохождение таможни не займёт много времени. После прохождения китайской таможни вас встретит наш сотрудник и отвезёт в отель для заселения. Отель на всё время лечения предоставляется бесплатно. После заселения в отель, в рабочее время Вас отвезут на первичный приём в клинику.</p>
+					</div>
+				</li>
+				<li class="faq-list-item">
+					<div class="collapsible-header"><i class="fas fa-chevron-down"></i>Какие документы нужны для пересечения границы?</div>
+					<div class="collapsible-body">
+						<p>Проезд до нас очень прост! Заранее свяжитесь с нами любым для вас удобным способом (указанным на сайте) и сообщите время вашего прибытия. По приезду в г. Благовещенск вас встретит наш сотрудник и отвезёт на таможню. Поможет вам приобрести билеты на проезд, заполнить миграционную карту.</p>
+						<p>Билеты до г. Хэйхэ и обратно до г. Благовещенска за счёт клиники.</p>
+						<p>Расстояние между г. Благовещенском и г. Хэйхэ не больше 1 километра, прохождение таможни не займёт много времени. После прохождения китайской таможни вас встретит наш сотрудник и отвезёт в отель для заселения. Отель на всё время лечения предоставляется бесплатно. После заселения в отель, в рабочее время Вас отвезут на первичный приём в клинику.</p>
+					</div>
+				</li>
+			</ul>
 	</section>
-	<!-- Преимущества лаборатории -->
-	<section class="advantages-lab">
-		<div class="container">
-			<h2 class="subtitle">Преимущества собственной лаборатории</h2>
-			<div class="grid-container advantages-lab-container">
-				<div class="advantages-lab-item">
-					<div class="advantages-lab-img">
-						<img data-src="img/_src/main/advantages-of-lab/adv-1.svg" class="lazy" alt="advantages">
-					</div>
-					<h4 class="advantages-lab-title">Экономия времени</h4>
-					<div class="advantages-lab-text">Изготавливаем протезы, коронки и виниры максимально быстро — в большинстве случаев всего за 3 дня.</div>
+	<section class="container service-form" id="zap">
+		<h3 class="subtitle"><strong>Запись</strong> на прием</h3>
+		<div class="custom-form form-service">
+			<div class="grid-container  form-service-inputs-container">
+				<div class="form-date-inputs">
+					<label for="form-date-name">Ваше имя</label>
+					<input type="text" class="custom-form-input" id="form-date-name" placeholder="Иван Иванов">
 				</div>
-				<div class="advantages-lab-item">
-					<div class="advantages-lab-img">
-						<img data-src="img/_src/main/advantages-of-lab/adv-2.svg" class="lazy" alt="advantages">
-					</div>
-					<h4 class="advantages-lab-title">Цены снижены на 50%</h4>
-					<div class="advantages-lab-text">Работаем без посредников и осуществляем прямые поставки материалов премиум-класса, что позволяет снизить стоимость услуги</div>
+				<div class="form-date-inputs">
+					<label for="form-date-tel">Номер вашего телефона</label>
+					<input type="tel" class="custom-form-input telephone" id="form-date-tel" placeholder="+7(___)___-__-__">
 				</div>
-				<div class="advantages-lab-item">
-					<div class="advantages-lab-img">
-						<img data-src="img/_src/main/advantages-of-lab/adv-3.svg" class="lazy" alt="advantages">
-					</div>
-					<h4 class="advantages-lab-title">Индивидуальный подход</h4>
-					<div class="advantages-lab-text">Зубные техники изготавливают конструкции с учётом ваших персональных пожеланий и особенностей ситуации</div>
+				<div class="form-date-inputs">
+					<label for="form-date">Желаемая дата</label>
+					<input type="text" class="custom-form-input date" id="form-date" placeholder="Выберите дату">
 				</div>
-				<div class="advantages-lab-item">
-					<div class="advantages-lab-img">
-						<img data-src="img/_src/main/advantages-of-lab/adv-4.svg" class="lazy" alt="advantages">
-					</div>
-					<h4 class="advantages-lab-title">Гарантия на изделия</h4>
-					<div class="advantages-lab-text">Выполняем многоступенчатый контроль качества и даём расширенную гарантию на все протезы и виниры</div>
+				<div class="form-date-inputs time">
+					<label for="form-date-time">Желамое время</label>
+					<input type="tel" class="custom-form-input telephone" id="form-date-time" placeholder="00:00">
+					<span class="fas fa-chevron-left time-btn time-left"></span>
+					<span class="fas fa-chevron-right time-btn time-right"></span>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!-- Слайдер сертификатов -->
-	<section class="certificates">
-		<div class="container">
-			<h2 class="subtitle">Свидетельства и сертификаты клиники</h2>
-			<div class="certificates-slider">
-				<div class="cerfiticates-slider-item"><img data-lazy="img/_src/main/certificates/certificate-1.jpg" alt="cert"></div>
-				<div class="cerfiticates-slider-item"><img data-lazy="img/_src/main/certificates/certificate-2.jpg" alt="cert"></div>
-				<div class="cerfiticates-slider-item"><img data-lazy="img/_src/main/certificates/certificate-3.jpg" alt="cert"></div>
-				<div class="cerfiticates-slider-item"><img data-lazy="img/_src/main/certificates/certificate-4.jpg" alt="cert"></div>
-				<div class="cerfiticates-slider-item"><img data-lazy="img/_src/main/certificates/certificate-1.jpg" alt="cert"></div>
-				<div class="cerfiticates-slider-item"><img data-lazy="img/_src/main/certificates/certificate-2.jpg" alt="cert"></div>
-				<div class="cerfiticates-slider-item"><img data-lazy="img/_src/main/certificates/certificate-3.jpg" alt="cert"></div>
-				<div class="cerfiticates-slider-item"><img data-lazy="img/_src/main/certificates/certificate-4.jpg" alt="cert"></div>
-			</div>
-		</div>
-	</section>
-	<!-- Как мы работаем? -->
-	<section class="container how-works">
-		<h2 class="subtitle">Как мы работаем?</h2>
-		<div class="grid-container how-works-list">
-			<div class="how-works-item">
-				<div class="how-works-number">1</div>
-				<div class="grid-container how-works-container">
-					<div class="how-works-img">
-						<img src="img/_src/main/howwework/work-1.svg" alt="work">
-					</div>
-					<div class="how-works-text">Отправьте заявку для получения консультации</div>
-				</div>
-			</div>
-			<div class="how-works-item">
-				<div class="how-works-number">2</div>
-				<div class="grid-container how-works-container">
-					<div class="how-works-img">
-						<img src="img/_src/main/howwework/work-2.svg" alt="work">
-					</div>
-					<div class="how-works-text">Оценка снимков и формирование окончательной цены по лечению</div>
-				</div>
-			</div>
-			<div class="how-works-item">
-				<div class="how-works-number">3</div>
-				<div class="grid-container how-works-container">
-					<div class="how-works-img">
-						<img src="img/_src/main/howwework/work-3.svg" alt="work">
-					</div>
-					<div class="how-works-text">Планирование и согласование приезда клиента</div>
-				</div>
-			</div>
-			<div class="how-works-item">
-				<div class="how-works-number">4</div>
-				<div class="grid-container how-works-container">
-					<div class="how-works-img">
-						<img src="img/_src/main/howwework/work-4.svg" alt="work">
-					</div>
-					<div class="how-works-text">Встреча клиента и переход границы, заселение в отель и поездка в клинику</div>
-				</div>
-			</div>
-			<div class="how-works-item">
-				<div class="how-works-number">5</div>
-				<div class="grid-container how-works-container">
-					<div class="how-works-img">
-						<img src="img/_src/main/howwework/work-5.svg" alt="work">
-					</div>
-					<div class="how-works-text">Лечение зубов в нашей клинике</div>
-				</div>
-			</div>
-			<div class="how-works-item">
-				<div class="how-works-number">6</div>
-				<div class="grid-container how-works-container">
-					<div class="how-works-img">
-						<img src="img/_src/main/howwework/work-6.svg" alt="work">
-					</div>
-					<div class="how-works-text">Провожаем клиента обратно в Россию</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Форма обратной связи -->
-	<section class="bottom-lead-form">
-		<div class="container">
-			<h3 class="bottom-lead-form-title">Мы всегда ответим на любые вопросы!</h3>
-			<p class="bottom-lead-form-text">Звоните по тел.: <a href="tel:88002348668">8 800 234-86-68</a>, или заполните форму заявки (мы перезвоним вам):</p>
-			<div class="custom-form bottom-lead-form-container">
-				<div class="grid-container bottom-lead-form-inputs">
-					<input type="text" class="custom-form-input" placeholder="Ваше имя" required>
-					<input type="tel" class="custom-form-input telephone" placeholder="+7(___)___-__-__" required>
-					<button type="submit" class="btn-purple btn-submit custom-form-submit">Перезвоните мне!</button>
-				</div>
+			<div class="пкшв-container custom-form form-service-inputs-container">
+				<button type="submit" class="btn-purple btn-submit custom-form-submit">Записаться на консультацию</button>
 				<div class="custom-form-checkbox-container">
 					<label>
-						<input type="checkbox" class="filled-in" checked="checked" />
-						<span>Я принимаю условия Пользовательского соглашения и даю своё согласие на обработку моей персональной информации на условиях, определённых Политикой конфиденциальности.</span>
+						<input type="checkbox" class="filled-in" checked="checked" required />
+						<span>Согласен с политикой конфиденциальности</span>
 					</label>
 				</div>
 			</div>

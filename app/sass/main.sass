@@ -20,6 +20,8 @@ input, textarea
 *
   margin: 0
   padding: 0
+ul
+  list-style-type: none
 button
   @include reset-button
   cursor: pointer
@@ -35,6 +37,14 @@ body
   font-family: 'HelveticaNeueCyr', Helvetica, Arial, sans-serif
   letter-spacing: 0.02em
   @include font(300,14px,24px)
+  div ul:not([class]) li::before
+    content: ''
+    width: 6px
+    height: 6px
+    vertical-align: middle
+    display: inline-block
+    margin-right: 5px
+    background: center/100% no-repeat url('../img/icons/circle-menu.svg')
   a
     color: #565656
   a:hover
@@ -239,6 +249,9 @@ img
   padding: 32px 0
   &>.flex-container
     align-items: center
+#header.single-header
+  background: #FFFFFF
+  box-shadow: 0 10px 20px rgba(135, 135, 210, 0.1)
 .toggle-menu
   display: block
   position: relative
@@ -584,7 +597,7 @@ img
   margin-right: 30px
   text-align: center
   strong
-    text-shadow: 0px 20px 40px rgba(42, 42, 96, 0.3)
+    text-shadow: 0 20px 40px rgba(42, 42, 96, 0.3)
     font-size: 64px
     font-weight: bold
     margin-bottom: 46px
@@ -823,7 +836,7 @@ img
   justify-content: center
   align-items: center
 .custom-popup
-  box-shadow: 0px 20px 40px rgba(135, 135, 210, 0.3)
+  box-shadow: 0 20px 40px rgba(135, 135, 210, 0.3)
   background: #FFFFFF
   border-radius: 30px
   max-width: 320px
@@ -853,5 +866,89 @@ img
   .subtitle
     margin-top: 0
     font-size: 24px
-
+//Services
+.service-header
+  background: center/cover no-repeat  url('../img/_src/services/header/header-bg.jpeg')
+  margin-top: -45px
+  box-shadow: 0 10px 20px rgba(135, 135, 210, 0.1)
+  .grid-container
+    padding-top: 50px
+    grid-template-columns: 2fr 1fr
+.service-img
+  width: 88px
+  height: 88px
+  background: #FFFFFF
+  box-shadow: 0 10px 20px rgba(135, 135, 210, 0.1)
+  border-radius: 10px
+  padding: 20px
+  margin-right: 30px
+.service-header-container
+  justify-content: flex-start
+  margin-bottom: 53px
+.service-titles
+  .subtitle
+    font-size: 30px
+    margin-top: 10px
+    margin-bottom: 0
+    &::after
+      position: absolute
+      margin: 0
+      bottom: -11px
+      left: 5px
+  .service-more
+    margin-left: 30px
+    margin-top: -3px
+    display: block
+    color: #8888D3
+.service-links-item
+  color: #333333
+  font-weight: bold
+  text-transform: uppercase
+  cursor: pointer
+  margin-right: 50px
+  padding-bottom: 16px
+.service-links-item.active
+  color: #8888D3
+  border-bottom: 3px solid  #8888D3
+.service-header-item:last-of-type
+  text-align: right
+  img
+    vertical-align: bottom
+.service-header-item:first-of-type
+  flex-direction: column
+  justify-content: flex-end
+.about-service
+  margin-top: 37px
+.service-list
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+  margin-bottom: 45px
+.service-list-item:first-of-type
+  margin-right: 30px
+.service-list-item
+  background: #FFFFFF
+  box-shadow: 0 20px 40px rgba(135, 135, 210, 0.3)
+  border-radius: 10px
+  img
+    width: 100%
+    height: 205px
+  .service-list-title
+    padding-left: 30px
+.service-list-content
+  padding: 30px 30px 48px 30px
+.service-list-info
+  padding: 0 30px 30px 30px
+  height: 21%
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+.service-list-info-item
+  justify-content: space-between
+.service-list-info-dots
+  flex: 1 0
+  border-bottom: 2px dotted #C8C8C8
+  height: 1em
+  margin: 0 .4em
+.service-list-info-price
+  color: #5E60A3
+  font-weight: bold
 @import 'media'

@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", function() {
         elements_selector: ".lazy"
     });
     lazyLoadInstance.update();
+    //Scroll
+    const scrollTo = (elem,attr) => {
+        $(elem).on("click", function () {
+            let anchor = $(this).attr(attr);
+            console.log(anchor);
+            $('html, body').stop().animate({
+                scrollTop: $('#'+anchor).offset().top - 60
+            }, 1500);
+        });
+    };
     //Маска для телефона
     $('.custom-form-input.telephone').mask('+7(000)00-00-00');
     // Календарь
@@ -12,16 +22,18 @@ document.addEventListener("DOMContentLoaded", function() {
           year = date.getFullYear(),
           month = date.getMonth(),
           day = date.getDay();
-    const picker = datepicker('.custom-form-input.date',{
-        formatter: (input, date, instance) => {
-            const value = date.toLocaleDateString();
-            input.value = value // => '1/1/2099'
-        },
-        minDate: new Date(year , month, day),
-        overlayButton: "Подтвердить",
-        customDays: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-        customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июнь','Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
-    });
+    if($('.custom-form-input.date').length>0) {
+        let picker = datepicker('.custom-form-input.date', {
+            formatter: (input, date, instance) => {
+                const value = date.toLocaleDateString();
+                input.value = value
+            },
+            minDate: new Date(year, month, day),
+            overlayButton: "Подтвердить",
+            customDays: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+            customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июнь', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+        });
+    }
     if($('.youtube')){
         $('.youtube').each(function () {
             let youtube_url = $(this).attr('data-youtube');
@@ -215,5 +227,16 @@ document.addEventListener("DOMContentLoaded", function() {
             popup_container.fadeOut('slow');
         }
     });
+    //Accordion
+    $('.collapsible').collapsible();
+    //Services ankors
+    $('.service-links-item:first-of-type').addClass('active');
+    scrollTo('.service-links-item','data-tab');
+    $('.service-links-item').click(function () {
+        if(!$(this).hasClass('active')){
+            $(this).addClass('active').siblings().removeClass('active');
+        }
+    });
+
 });
 
