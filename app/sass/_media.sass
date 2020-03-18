@@ -1,5 +1,12 @@
 @import "vars"
 /*==========  Desktop First  ==========*/
+@media screen and (max-width: 1450px)
+  //Service slider
+  .reviews-slider
+    .slider-btn-left
+      left: -3%
+    .slider-btn-right
+      right: -3%
 @media screen and (max-width: 1280px)
   //Main page
   #header
@@ -51,8 +58,84 @@
       display: none
     .logo-title
       display: none
+  //Service header
+  .service-header-item:last-of-type
+    display: none
+  .service-header .grid-container
+    grid-template-columns: 1fr
+  .service-header-item
+    overflow: hidden
+  //Service list
+  .service-list
+    grid-template-columns: 1fr
+  .service-list-item:first-of-type
+    margin-right: 0
+  .service-list-item
+    margin-bottom: 30px
+  //Form service
+  .form-service-inputs-container
+    grid-template-columns: 1fr
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
+  body section
+    padding-bottom: 30px !important
+  //Service header
+  .service-links
+    overflow-x: scroll
+  .service-links::-webkit-scrollbar
+    height: 0px
+  .service-links-wrapper
+    justify-content: flex-start
+    transition: all 200ms ease-in-out
+    width: max-content
+  .service-header-item
+    position: relative
+  .service-links-item
+    margin-right: 50px
+  //.service-link-btn
+  //  display: block
+  //  width: 20px
+  //  text-align: center
+  //  line-height: 20px
+  //  height: 5px
+  //  position: absolute
+  //  z-index: 1
+  //  color: #8888D3
+  //  cursor: pointer
+  //.service-link-right
+  //  right: 0
+  //  bottom: 55px
+  //.service-link-left
+  //  left: 0
+  //  bottom: 50px
+  //Review
+  .review-container
+    grid-template-columns: 1fr
+    padding: 30px 25px
+    background: #FAFAFF
+    border-radius: 5px
+  .review-item:first-of-type
+    height: 75px
+  .review-item:nth-of-type(2)
+    margin-bottom: 30px
+  .review-item
+    .youtube
+      height: 133px
+      border-radius: 10px
+  .review-gallery-item
+    img
+      width: 100%
+  .reviews-slider .slider-btn
+    font-size: 25px
+  .reviews-slider .slider-btn-left
+    left: -2.1%
+  .faq-list-item .collapsible-header
+    font-size: 16px
+  .mobile-review-info
+    display: block
+  .review-item:nth-of-type(3)
+    .review-name,.review-city
+      display: none
   //Services
   .services-item
     box-shadow: 0 10px 20px rgba(135, 135, 210, 0.1)
@@ -68,6 +151,37 @@
     margin-bottom: 30px
   .about-us-item:first-of-type
     margin-right: 0
+  //Service form
+  .service-form
+    background: #FAFAFF
+  .service-form-container
+    box-shadow: none
+    background: none
+    border-radius: 0
+  //Service gallery
+  .service-gallery-more,.service-gallery-list
+    display: none
+  .service-gallery-slider
+    display: block
+    .slider-btn
+      top: 35%
+    .slider-btn-right
+      right: 0
+    .slider-btn-left
+      left: 0
+    .service-gallery-button
+      width: 230px
+      height: 230px
+      transition: all 10ms ease-in-out
+      margin-right: 10px
+    .service-gallery-button:not(.slick-active)
+      visibility: hidden
+    .service-gallery-button.slick-active + .service-gallery-button
+      visibility: visible
+      margin-left: 10px
+      opacity: 0.4
+  .service-faq .subtitle, .service-gallery .subtitle, .service-reviews .subtitle
+    padding-left: 40px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
   //Main banner
@@ -113,6 +227,32 @@
   //Doctors slider
   .doctors-slider-item
     padding: 0 30px
+  //FAQ
+  .faq-list-item .collapsible-header
+    display: grid
+    grid-template-columns: 1fr 11fr
+  .faq-list-item .fa-chevron-down
+    display: flex
+    justify-content: center
+    align-items: center
+  //Service form
+  .service-form-container
+    padding: 30px 0
+    .subtitle
+      margin-top: 0
+  //Service header
+  .service-img
+    width: 60px
+    height: 60px
+    padding: 10px
+  //Form service
+  .form-service-inputs-container,.custom-form-submit
+    margin-bottom: 30px
+  .form-service-submit-container
+    flex-wrap: wrap
+    .custom-form-submit
+      margin-right: 0
+      margin-bottom: 30px
 @media  only screen and (max-width: 680px)
   .container
     padding-left: 10px
@@ -195,6 +335,22 @@
     padding: 10px 25px
   .info-doctor-text
     font-size: 12px
+  //service-list-info-item
+  .service-list-info-item
+    flex-wrap: wrap
+    &>div
+      width: 100%
+    .service-list-info-price
+      order: 2
+    .service-list-info-dots
+      margin: 15px 0 10px 0
+      height: 4px
+      flex: none
+      display: block
+      order: 3
+  .service-list-info-item:not(:first-of-type)
+    .service-list-info-dots
+      display: none
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 375px)
  /**/

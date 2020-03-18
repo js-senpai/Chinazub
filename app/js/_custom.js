@@ -249,6 +249,53 @@ document.addEventListener("DOMContentLoaded", function() {
         slidesToScroll: 1,
         prevArrow: '<span class="fas fa-chevron-left slider-btn slider-btn-left"></span>',
         nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>',
-    })
+    });
+    $('.service-gallery-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        centerMode: true,
+        prevArrow: '<span class="fas fa-chevron-left slider-btn slider-btn-left"></span>',
+        nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>',
+    });
+    // //Изменение кнопки заказа звонка
+    // const serviceList = $('.service-links-wrapper');
+    // // let linksWidth = 0;
+    // // const clickList = () =>{
+    // //     $('.service-link-right').click(function () {
+    // //         $('.service-links-item').each(()=>{
+    // //             linksWidth += $(this).outerWidth();
+    // //             console.log($(this).outerWidth())
+    // //         });
+    // //         serviceList.css({'transform': `translateX(-${linksWidth}px)`})
+    // //     });
+    // //     $('.service-link-btn').click(function () {
+    // //         if(linksWidth!==0) {
+    // //             serviceList.css({'transform': `translateX(-${linksWidth/2}px)`});
+    // //         }
+    // //     });
+    // // };
+    // const changeWidthList = () =>{
+    //     if($(window).width() <= 760){
+    //         // if($('.service-header-item:first-of-type .service-link-left').length === 0) {
+    //         //     $('.service-header-item:first-of-type').append('<span class="fas fa-chevron-left service-link-btn service-link-left"></span>');
+    //         //     $('.service-header-item:first-of-type').append('<span class="fas fa-chevron-right service-link-btn service-link-right"></span>');
+    //         // }
+    //         let widthList = $('.service-header-item').width();
+    //         serviceList.css({'width': `calc(100% * ${widthList}`});
+    //         // clickList(widthList);
+    //     }else{
+    //         serviceList.width('100%');
+    //         // serviceList.css({'transform':'none'});
+    //         // if($('.service-header-item:first-of-type .service-link-btn')){
+    //         //     $('.service-header-item:first-of-type .service-link-btn').remove();
+    //         // }
+    //     }
+    // };
+    // changeWidthList();
+    // $(window).resize(function(){
+    //     changeWidthList();
+    // });
 });
 

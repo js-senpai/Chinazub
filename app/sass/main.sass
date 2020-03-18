@@ -905,7 +905,7 @@ img
   font-weight: bold
   text-transform: uppercase
   cursor: pointer
-  margin-right: 50px
+  margin-right: 5%
   padding-bottom: 16px
 .service-links-item.active
   color: #8888D3
@@ -932,6 +932,7 @@ img
   img
     width: 100%
     height: 205px
+    object-fit: cover
   .service-list-title
     padding-left: 30px
 .service-list-content
@@ -964,6 +965,8 @@ img
       margin: 0
       left: 0
       top: 45%
+.mobile-review-info
+  display: none
 .service-gallery
   background: #FAFAFF
   padding-top: 25px
@@ -1025,6 +1028,8 @@ img
   transition: all 1s ease-in-out
 .service-gallery-more:hover
   transform: scale(1.1)
+.service-gallery-slider
+  display: none
 //Service reviews
 .review-container
   grid-template-columns: 2fr 1fr
@@ -1032,16 +1037,16 @@ img
 .review-item:first-of-type
   border-radius: 10px
   overflow: hidden
+.review-name,.review-city
+  color: #000000
+.review-name
+  font-weight: bold
+  font-size: 24px
+  margin-top: 5px
+.review-city
+  font-size: 18px
+  margin-bottom: 40px
 .review-item:last-of-type
-  .review-name,.review-city
-    color: #000000
-  .review-name
-    font-weight: bold
-    font-size: 24px
-    margin-top: 5px
-  .review-city
-    font-size: 18px
-    margin-bottom: 40px
   .review-gallery
     grid-template-columns: repeat(2,1fr)
     grid-gap: 30px
@@ -1096,7 +1101,7 @@ img
   .fa-chevron-down
     transform: rotate(0)
 //Service form
-.service-form
+.service-form-container
   background: #FFFFFF
   box-shadow: 0 20px 40px rgba(135, 135, 210, 0.3)
   border-radius: 30px
