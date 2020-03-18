@@ -237,6 +237,18 @@ document.addEventListener("DOMContentLoaded", function() {
             $(this).addClass('active').siblings().removeClass('active');
         }
     });
-
+    //Fancybox
+    $(".fancybox").fancybox({
+        openEffect	: 'none',
+        closeEffect	: 'none'
+    });
+    //Review slider
+    $('.reviews-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<span class="fas fa-chevron-left slider-btn slider-btn-left"></span>',
+        nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>',
+    })
 });
 

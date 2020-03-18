@@ -917,6 +917,7 @@ img
 .service-header-item:first-of-type
   flex-direction: column
   justify-content: flex-end
+//About service
 .about-service
   margin-top: 37px
 .service-list
@@ -951,4 +952,169 @@ img
 .service-list-info-price
   color: #5E60A3
   font-weight: bold
+//Before and after
+.service-reviews,.service-gallery,.service-faq
+  .subtitle
+    text-align: left
+    padding-left: 100px
+    position: relative
+    margin-bottom: 50px
+    &::after
+      position: absolute
+      margin: 0
+      left: 0
+      top: 45%
+.service-gallery
+  background: #FAFAFF
+  padding-top: 25px
+.service-gallery-list
+  grid-template-columns: repeat(4,1fr)
+  grid-gap: 30px
+.service-gallery-button
+  display: block
+  width: auto
+  height: 100%
+  max-height: 280px
+  padding: 0
+  border: none
+  outline: none
+  border-radius: 10px
+  overflow: hidden
+  position: relative
+  img
+    width: 100%
+    height: 100%
+.service-gallery-button:hover  .service-gallery-bg-container  .fa-search
+  display: block
+.service-gallery-bg
+  background: rgba(136, 136, 211, 0.8)
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+.service-gallery-bg-container
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  .fa-search
+    display: none
+    background: rgba(255, 255, 255, 0.2)
+    width: 120px
+    height: 120px
+    border-radius: 50%
+    text-align: center
+    line-height: 120px
+    font-size: 2rem
+.service-gallery-more
+  background: #FAFAFF
+  box-shadow: 0 20px 40px rgba(135, 135, 210, 0.3)
+  border-radius: 10px
+  height: 57px
+  width: 100%
+  display: block
+  text-align: center
+  color: #5E60A3
+  font-weight: bold
+  text-transform: uppercase
+  line-height: 57px
+  margin-top: 75px
+  cursor: pointer
+  transition: all 1s ease-in-out
+.service-gallery-more:hover
+  transform: scale(1.1)
+//Service reviews
+.review-container
+  grid-template-columns: 2fr 1fr
+  grid-column-gap: 30px
+.review-item:first-of-type
+  border-radius: 10px
+  overflow: hidden
+.review-item:last-of-type
+  .review-name,.review-city
+    color: #000000
+  .review-name
+    font-weight: bold
+    font-size: 24px
+    margin-top: 5px
+  .review-city
+    font-size: 18px
+    margin-bottom: 40px
+  .review-gallery
+    grid-template-columns: repeat(2,1fr)
+    grid-gap: 30px
+  .review-gallery-item
+    position: relative
+  .review-gallery-item:first-of-type::before,.review-gallery-item:nth-of-type(3)::before
+    content: 'До'
+    display: block
+    width: 69px
+    height: 24px
+    text-align: center
+    line-height: 24px
+    color: $white
+    text-transform: uppercase
+    background: #8888D3
+    border-radius: 0 3px 3px 0
+    position: absolute
+    left: 0
+    top: 15px
+  .review-gallery-item:nth-of-type(3)::before
+    content: 'После'
+.reviews-slider
+  .slider-btn
+    top: 45%
+  .slider-btn-right
+    right: -5%
+  .slider-btn-left
+    left: -5%
+  .review-container
+    display: grid
+//FAQ
+.faq-list
+  border: none
+  box-shadow: none
+.faq-list-item
+  margin-bottom: 30px
+  background: #FFFFFF
+  box-shadow: 0 10px 20px rgba(135, 135, 210, 0.1)
+  border-radius: 10px
+  .fa-chevron-down
+    color: #8888D3
+    font-size: 14px
+    line-height: 20px
+    transform: rotate(-90deg)
+    transition: all 1s ease-in-out
+  .collapsible-header
+    color: #000000
+    font-weight: bold
+    font-size: 18px
+    border-bottom: 0
+.faq-list-item.active
+  .fa-chevron-down
+    transform: rotate(0)
+//Service form
+.service-form
+  background: #FFFFFF
+  box-shadow: 0 20px 40px rgba(135, 135, 210, 0.3)
+  border-radius: 30px
+  padding: 40px 50px
+  margin-bottom: 75px
+.form-service-inputs-container
+  grid-template-columns: repeat(4,1fr)
+  grid-column-gap: 30px
+  margin-bottom: 44px
+  .form-date-inputs
+    width: 100%
+.form-service-submit-container
+  justify-content: center
+  align-items: center
+  .custom-form-submit
+    max-width: 340px
+    width: 100%
+    margin-right: 30px
+  label
+    margin-bottom: 0
 @import 'media'
