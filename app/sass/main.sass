@@ -94,7 +94,7 @@ img
   min-width: 320px
   padding: 0 30px
   width: 100%
-  max-width: 1440px
+  max-width: 1500px
   margin: 0 auto
 .container
   min-width: 320px
@@ -1122,4 +1122,95 @@ img
     margin-right: 30px
   label
     margin-bottom: 0
+//Page title
+.page-title
+  justify-content: flex-start
+  align-items: center
+  margin-top: 50px
+  .title
+    margin-right: 30px
+.price-info-container
+  border-radius: 10px
+  border: 1px solid $light-purple
+  padding: 10px 20px
+  position: relative
+  &::before
+    content: '*'
+    display: block
+    width: 14px
+    height: 14px
+    background-color: $light-purple
+    text-align: center
+    line-height: 22px
+    color: $white
+    border-radius: 50%
+    position: absolute
+    top: -5px
+    left: -5px
+//Price list
+.price-list,.price-items
+  .subtitle
+    text-align: left
+    position: relative
+    font-size: 24px
+    margin-top: 0
+    &::after
+      margin: 0
+      position: absolute
+      top: 45%
+      left: -4%
+.price-list .subtitle
+  margin-bottom: 40px
+.price-list-item
+  grid-template-columns: 10fr 2fr
+  padding-bottom: 5px
+  border-bottom: 2px dotted #D2D2D2
+  margin-bottom: 10px
+.price-list-item-name,.price-list-info
+  color: #000000
+.price-list-item-buttons
+  grid-template-columns: repeat(2,1fr)
+.price-list-btn
+  display: block
+  width: 30px
+  height: 30px
+  cursor: pointer
+  color: #5E60A3
+  text-align: center
+  line-height: 28px
+  font-size: 13px
+  border-radius: 50%
+  border: 2px solid #7273BA
+.price-list-moreinfo
+  color: #8888D3
+  font-size: 12px
+  line-height: 17px
+.mobile-more-info
+  display: none
+//Price items
+.price-items
+  .subtitle
+    margin-bottom: 25px
+.price-items-item
+  grid-template-columns: 2fr 6fr 3fr
+  grid-column-gap: 30px
+  padding-bottom: 20px
+  margin-bottom: 20px
+.price-items-item:not(:last-of-type)
+  border-bottom: 2px dotted #D2D2D2
+.price-items-char-item
+  grid-template-columns: repeat(3,1fr)
+.char-list-review
+  grid-template-columns: repeat(5,1fr)
+  margin-bottom: 5px
+.price-items-title
+  color: #5E60A3
+  font-size: 18px
+  margin-top: 0
+.char-list-review-item
+  cursor: pointer
+.price-items-price
+  text-align: right
+.mobile-price
+  display: none
 @import 'media'

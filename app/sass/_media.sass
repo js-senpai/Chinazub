@@ -75,6 +75,10 @@
   //Form service
   .form-service-inputs-container
     grid-template-columns: 1fr
+  //Price list
+  .price-list,.price-items
+    .subtitle::after
+      display: none
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
   body section
@@ -83,7 +87,7 @@
   .service-links
     overflow-x: scroll
   .service-links::-webkit-scrollbar
-    height: 0px
+    height: 0
   .service-links-wrapper
     justify-content: flex-start
     transition: all 200ms ease-in-out
@@ -182,6 +186,41 @@
       opacity: 0.4
   .service-faq .subtitle, .service-gallery .subtitle, .service-reviews .subtitle
     padding-left: 40px
+  //Price list
+  .price-list-item
+    grid-template-columns: 10fr 1fr
+  .price-list-info
+    display: none
+  .mobile-more-info
+    display: block
+    font-weight: bold
+  .price-items-item
+    grid-column-gap: 0
+    grid-template-columns: 1fr
+  .price-items-img
+    text-align: center
+  .mobile-price
+    display: block
+    color: #8888D3
+    font-size: 18px
+    font-weight: bold
+    margin-bottom: 15px
+  .price-items-price
+    display: none
+  .price-items-char-item
+    grid-template-columns: 1fr 1fr
+  .char-item-name
+    grid-column-start: 1
+    grid-column-end: 12
+    margin-bottom: 30px
+  .price-items .subtitle, .price-list .subtitle
+    font-size: 18px
+  .price-items-img
+    margin-bottom: 30px
+  .price-items-title,.price-items-item:last-of-type
+    margin-bottom: 0
+  .price-items-item:last-of-type
+    padding-bottom: 0
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
   //Main banner
@@ -189,6 +228,13 @@
     font-size: 18px
   h2
     font-size: 24px
+  //Page title
+  .page-title
+    flex-wrap: wrap
+    margin-bottom: 30px
+  .title
+    font-size: 24px
+  //Lead banner
   .lead-banner-form
     flex-wrap: wrap
     justify-content: center
