@@ -82,6 +82,35 @@
   //Doctors list
   .doctors-list
     grid-template-columns: repeat(2,1fr)
+  //Maps container
+  .contact,.maps-container
+    grid-template-columns: 1fr
+  .maps-container
+    padding: 0
+  .map-item:not(.map)
+    padding: 25px 20px
+  .map-item.map
+    height: 100%
+    max-height: 300px
+  .contact-item
+    height: auto
+  .contact-item:nth-of-type(1)
+    margin-bottom: 20px
+  .second-social
+    grid-template-columns: 1fr
+  .contact-socials
+    order: -1
+  .contact-img
+    img
+      width: 100%
+      max-height: 135px
+      height: 100%
+      object-fit: cover
+
+  .contact-socials-list
+    justify-content: flex-start
+    .social-menu-item
+      margin-right: 20px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
   body section
@@ -419,6 +448,13 @@
   //Doctors list
   .doctors-list
     grid-template-columns: 1fr
+  //Map social
+  .first-social,.map-contact
+    grid-template-columns: 1fr
+  .maps-title,.map-title
+    font-size: 18px
+  .map-item.map
+    height: 152px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 375px)
  /**/

@@ -1057,6 +1057,8 @@ img
     grid-gap: 30px
   .review-gallery-item
     position: relative
+    border-radius: 10px
+    overflow: hidden
   .review-gallery-item:first-of-type::before,.review-gallery-item:nth-of-type(3)::before
     content: 'До'
     display: block
@@ -1248,4 +1250,119 @@ img
 .reviews
   .review-container
     margin-bottom: 75px
+//Contact
+.contact
+  grid-column-gap: 50px
+  grid-template-columns: 2fr 3fr
+.contact-social
+  grid-column-gap: 20px
+  grid-row-gap: 30px
+  .header-contacts-item
+    justify-content: flex-start
+    .header-contacts-info
+      font-weight: bold
+      color: #565656
+.first-social
+  margin-bottom: 50px
+  grid-template-columns: repeat(2,minmax(164px,1fr))
+.second-social
+  grid-template-columns: repeat(2,minmax(205px,1fr))
+  .social-menu-item
+    a
+      width: 30px
+      height: 30px
+      line-height: 30px
+      color: $white
+      font-size: 18px
+      background: #c7c7ee
+.contact-title
+  color: #000000
+  font-size: 18px
+  font-weight: bold
+  margin-top: 0
+  margin-bottom: 30px
+.contact-item
+  height: 325px
+.contact-item:nth-of-type(2)
+  border-radius: 10px
+  overflow: hidden
+  &>img,&>iframe
+    width: 100%
+    height: 100%
+//Map
+.maps
+  background: #FAFAFA
+  padding-top: 50px
+.maps-title
+  color: #000000
+  font-size: 24px
+.maps-container
+  background: #FFFFFF
+  box-shadow: 0 20px 40px rgba(135, 135, 210, 0.3)
+  border-radius: 10px
+  padding: 20px 30px
+  grid-template-columns: 1.5fr 2fr
+  grid-column-gap: 30px
+.maps-container:not(:last-of-type)
+  margin-bottom: 60px
+.map-title
+  color: #000000
+  font-size: 24px
+  margin-top: 0
+.contact-img
+  border-radius: 10px
+  overflow: hidden
+.watch-map
+  display: block
+  width: 210px
+  height: 32px
+  line-height: 32px
+  text-align: center
+  color: #8888D3
+  background: rgba(212, 225, 244, 0.2)
+  border-radius: 30px
+  margin-bottom: 25px
+.watch-map-text
+  padding-right: 5px
+  &::before
+    content: ''
+    display: inline-block
+    width: 20px
+    height: 20px
+    background: center/100% no-repeat url('../img/icons/pin-map.svg')
+    vertical-align: middle
+    margin-right: 10px
+.map-gallery
+  margin-bottom: 35px
+.map-gallery-img
+  max-height: 378px
+  height: 100%
+  border-radius: 10px
+  overflow: hidden
+  margin-bottom: 13px
+  img
+    width: 100%
+    height: 100%
+.other-gallery-map
+  grid-template-columns: repeat(auto-fit,minmax(90px,1fr))
+  grid-gap: 13px
+  img
+    width: 100%
+    cursor: pointer
+.map-item.map
+  border-radius: 10px
+  overflow: hidden
+  &>img,&>iframe
+    width: 100%
+    height: 100%
+.map-contact
+  grid-template-columns: 1fr 1fr
+  grid-gap: 30px
+  .header-contacts-item
+    justify-content: flex-start
+    margin-right: 0
+  .header-contacts-info
+    a
+      font-weight: bold
+      color: #565656
 @import 'media'

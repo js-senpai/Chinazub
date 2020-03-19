@@ -297,5 +297,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // $(window).resize(function(){
     //     changeWidthList();
     // });
+    //Map gallery
+    $('.other-gallery-map img').click(function(){
+        let currentImage =$(this),
+            mainImage  = currentImage.parent().siblings('.map-gallery-img').find('img'),
+            currentSrc = currentImage.attr('src'),
+            oldSrc = currentImage.attr('src');
+        mainImage.attr('src',currentSrc);
+        currentImage.attr('src',oldSrc);
+    })
 });
 
