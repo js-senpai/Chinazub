@@ -79,6 +79,9 @@
   .price-list,.price-items
     .subtitle::after
       display: none
+  //Doctors list
+  .doctors-list
+    grid-template-columns: repeat(2,1fr)
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
   body section
@@ -118,17 +121,26 @@
     padding: 30px 25px
     background: #FAFAFF
     border-radius: 5px
-  .review-item:first-of-type
+  .mobile-review-info
     height: 75px
-  .review-item:nth-of-type(2)
+  .first-review-item
     margin-bottom: 30px
-  .review-item
     .youtube
-      height: 133px
-      border-radius: 10px
+      min-height: 200px
+  .second-review-item
+    .review-gallery
+      grid-gap: 15px
   .review-gallery-item
     img
       width: 100%
+  .review-name
+    font-size: 18px
+    margin-bottom: 0
+  .review-city
+    font-size: 12px
+    color: #565656
+    margin-top: 5px
+    margin-bottom: 10px
   .reviews-slider .slider-btn
     font-size: 25px
   .reviews-slider .slider-btn-left
@@ -137,7 +149,7 @@
     font-size: 16px
   .mobile-review-info
     display: block
-  .review-item:nth-of-type(3)
+  .second-review-item
     .review-name,.review-city
       display: none
   //Services
@@ -221,6 +233,12 @@
     margin-bottom: 0
   .price-items-item:last-of-type
     padding-bottom: 0
+  //Review
+  .reviews
+    .review-container
+      margin-bottom: 30px
+      padding: 0
+      background: #FFF
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
   //Main banner
@@ -231,9 +249,10 @@
   //Page title
   .page-title
     flex-wrap: wrap
-    margin-bottom: 30px
-  .title
-    font-size: 24px
+    margin-bottom: 10px
+    .title
+      font-size: 24px
+      margin-right: 0
   //Lead banner
   .lead-banner-form
     flex-wrap: wrap
@@ -397,6 +416,9 @@
   .service-list-info-item:not(:first-of-type)
     .service-list-info-dots
       display: none
+  //Doctors list
+  .doctors-list
+    grid-template-columns: 1fr
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 375px)
  /**/

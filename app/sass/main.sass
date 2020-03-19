@@ -565,6 +565,8 @@ img
   display: flex
   justify-content: center
   align-items: center
+  background-size: cover
+  background-position: center
   .play
     background: top center/100% no-repeat url('../img/icons/play.png')
     width: 150px
@@ -1034,9 +1036,12 @@ img
 .review-container
   grid-template-columns: 2fr 1fr
   grid-column-gap: 30px
-.review-item:first-of-type
-  border-radius: 10px
+.first-review-item
   overflow: hidden
+  border-radius: 10px
+  iframe
+    width: 100%
+    height: 100%
 .review-name,.review-city
   color: #000000
 .review-name
@@ -1046,7 +1051,7 @@ img
 .review-city
   font-size: 18px
   margin-bottom: 40px
-.review-item:last-of-type
+.second-review-item
   .review-gallery
     grid-template-columns: repeat(2,1fr)
     grid-gap: 30px
@@ -1213,4 +1218,34 @@ img
   text-align: right
 .mobile-price
   display: none
+//Doctors list
+.doctors-list
+  grid-template-columns: repeat(4,1fr)
+  grid-gap: 30px
+  .doctor-title
+    font-size: 18px
+    margin-top: 21px
+  .doctor-description
+    margin-bottom: 17px
+  .doctor-subtitle
+    margin-bottom: 0
+.doctors-list-img
+  text-align: center
+  img
+    max-height: 280px
+.doctors-list-item
+  border-radius: 10px
+  padding: 15px
+  cursor: pointer
+  background: #FFFFFF
+  transition: all 1s ease-in-out
+  &:hover
+    box-shadow: 0 20px 40px rgba(135, 135, 210, 0.3)
+.doctors-info
+  flex-direction: column
+  justify-content: space-between
+//Review
+.reviews
+  .review-container
+    margin-bottom: 75px
 @import 'media'
