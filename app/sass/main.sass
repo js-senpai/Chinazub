@@ -1134,8 +1134,11 @@ img
   justify-content: flex-start
   align-items: center
   margin-top: 50px
+  margin-bottom: 50px
   .title
+    margin-top: 0
     margin-right: 30px
+    margin-bottom: 0
 .price-info-container
   border-radius: 10px
   border: 1px solid $light-purple
@@ -1365,4 +1368,26 @@ img
     a
       font-weight: bold
       color: #565656
+//Hotel
+.hotel
+  grid-template-columns: 1.1fr 2fr
+  grid-column-gap: 35px
+.hotel-title
+  margin-top: 0
+  color: #565656
+  font-size: 24px
+.hotel-titles
+  grid-template-columns: repeat(auto-fit,minmax(223px,1fr))
+.hotels-price
+  margin-bottom: 30px
+  .service-list-info-name
+    color: #000000
+.hotel-item
+  .watch-map
+    margin-left: 5px
+    width: 223px
+.hotel-contacts
+  justify-content: flex-start
+  .header-contacts-item
+    justify-content: flex-start
 @import 'media'
