@@ -1435,4 +1435,33 @@ img
   margin-right: 15px
   a
     color: $white
+//Blog content
+.blog-content
+  img
+    width: 100%
+    margin-bottom: 30px
+.blog-info
+  justify-content: flex-start
+  align-items: center
+  margin-bottom: 30px
+.blog-title
+  font-size: 36px
+.blog-more,.blog-time,.blog-date
+  margin-right: 50px
+.blog-more
+  position: relative
+  color: #8888D3
+  padding-left: 30px
+  &::before
+    content: ''
+    display: block
+    width: 17px
+    height: 3px
+    background: center/100% no-repeat url(../img/icons/dotted.svg)
+    position: absolute
+    top: 10px
+    left: 0
+.blog-time,.blog-date
+  color: #000000
+
 @import 'media'
