@@ -113,6 +113,13 @@
   //News container
   .news-list-container
     grid-template-columns: 1fr
+  //Информация о клинике
+  .more-info-clinic
+    display: block
+  .more-info-clinic-item:not(:last-of-type)
+    margin-bottom: 30px
+  .more-info-clinic-item
+    max-width: 100%
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
   body section
@@ -130,22 +137,6 @@
     position: relative
   .service-links-item
     margin-right: 50px
-  //.service-link-btn
-  //  display: block
-  //  width: 20px
-  //  text-align: center
-  //  line-height: 20px
-  //  height: 5px
-  //  position: absolute
-  //  z-index: 1
-  //  color: #8888D3
-  //  cursor: pointer
-  //.service-link-right
-  //  right: 0
-  //  bottom: 55px
-  //.service-link-left
-  //  left: 0
-  //  bottom: 50px
   //Review
   .review-container
     grid-template-columns: 1fr
@@ -172,7 +163,7 @@
     color: #565656
     margin-top: 5px
     margin-bottom: 10px
-  .reviews-slider .slider-btn
+  .slider-btn
     font-size: 25px
   .reviews-slider .slider-btn-left
     left: -2.1%
@@ -211,7 +202,7 @@
   .service-gallery-slider
     display: block
     .slider-btn
-      top: 35%
+      top: 45%
     .slider-btn-right
       right: 0
     .slider-btn-left
@@ -273,6 +264,10 @@
   //Hotels
   .hotel,.hotel-titles
     grid-template-columns: 1fr
+  //Информация о клинике
+  .about-clinic
+    grid-template-columns: 1fr
+    margin-bottom: 30px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
   //Main banner
@@ -352,6 +347,25 @@
     .custom-form-submit
       margin-right: 0
       margin-bottom: 30px
+  //Clinic
+  .clinic-gallery
+    grid-template-columns: 1fr
+  .blog-title
+    font-size: 24px
+    line-height: 24px
+  .mini-clinic-gallery img
+    max-height: 190px
+  // online form
+  .online-form
+    .subtitle
+      margin-bottom: 30px
+      &::after
+        display: none
+    .form-date-inputs-container,.form-date-submit-container
+      flex-wrap: wrap
+    .form-date-inputs,.custom-form-submit
+      margin-right: 0
+      width: 100%
 @media  only screen and (max-width: 680px)
   .container
     padding-left: 10px
@@ -440,6 +454,8 @@
     display: none
   .blog-date
     margin-right: 0
+  .blog-title
+    margin-bottom: 20px
 /* Extra Small Devices, Phones */
 @media (max-width: 483px)
   .lead-banner-info-doctor
@@ -472,9 +488,28 @@
     font-size: 18px
   .map-item.map
     height: 152px
+  //About
+  .about-doctors-list
+    position: relative
+    .slider-btn
+      top: 45%
+    .slider-btn-left
+      left: 0
+    .slider-btn-right
+      right: 0
+    .doctors-list-item
+      padding: 0
+      img
+        width: 100%
+        max-width: 250px
+        margin: 0 auto
+    .doctors-list-item:hover
+      box-shadow: none
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 375px)
- /**/
+  .mini-clinic-gallery
+    img
+      max-height: 109px
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */

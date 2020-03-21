@@ -244,6 +244,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     //Review slider
     $('.reviews-slider').slick({
+        lazyLoad: 'progressive',
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -251,6 +252,7 @@ document.addEventListener("DOMContentLoaded", function() {
         nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>',
     });
     $('.service-gallery-slider').slick({
+        lazyLoad: 'progressive',
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -259,52 +261,78 @@ document.addEventListener("DOMContentLoaded", function() {
         prevArrow: '<span class="fas fa-chevron-left slider-btn slider-btn-left"></span>',
         nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>',
     });
-    // //Изменение кнопки заказа звонка
-    // const serviceList = $('.service-links-wrapper');
-    // // let linksWidth = 0;
-    // // const clickList = () =>{
-    // //     $('.service-link-right').click(function () {
-    // //         $('.service-links-item').each(()=>{
-    // //             linksWidth += $(this).outerWidth();
-    // //             console.log($(this).outerWidth())
-    // //         });
-    // //         serviceList.css({'transform': `translateX(-${linksWidth}px)`})
-    // //     });
-    // //     $('.service-link-btn').click(function () {
-    // //         if(linksWidth!==0) {
-    // //             serviceList.css({'transform': `translateX(-${linksWidth/2}px)`});
-    // //         }
-    // //     });
-    // // };
-    // const changeWidthList = () =>{
-    //     if($(window).width() <= 760){
-    //         // if($('.service-header-item:first-of-type .service-link-left').length === 0) {
-    //         //     $('.service-header-item:first-of-type').append('<span class="fas fa-chevron-left service-link-btn service-link-left"></span>');
-    //         //     $('.service-header-item:first-of-type').append('<span class="fas fa-chevron-right service-link-btn service-link-right"></span>');
-    //         // }
-    //         let widthList = $('.service-header-item').width();
-    //         serviceList.css({'width': `calc(100% * ${widthList}`});
-    //         // clickList(widthList);
-    //     }else{
-    //         serviceList.width('100%');
-    //         // serviceList.css({'transform':'none'});
-    //         // if($('.service-header-item:first-of-type .service-link-btn')){
-    //         //     $('.service-header-item:first-of-type .service-link-btn').remove();
-    //         // }
-    //     }
-    // };
-    // changeWidthList();
-    // $(window).resize(function(){
-    //     changeWidthList();
-    // });
     //Map gallery
-    $('.other-gallery-map img').click(function(){
-        let currentImage =$(this),
-            mainImage  = currentImage.parent().siblings('.map-gallery-img').find('img'),
-            currentSrc = currentImage.attr('src'),
-            oldSrc = currentImage.attr('src');
-        mainImage.attr('src',currentSrc);
-        currentImage.attr('src',oldSrc);
-    })
+    const mainGallery = (item,parent)=>{
+        $(item).click(function(){
+            let currentImage =$(this),
+                mainImage  = currentImage.parent().siblings(parent).find('img'),
+                currentSrc = currentImage.attr('src'),
+                oldSrc = currentImage.attr('src');
+            mainImage.attr('src',currentSrc);
+            currentImage.attr('src',oldSrc);
+        })
+    };
+    mainGallery('.other-gallery-map img','.map-gallery-img');
+    mainGallery('.mini-clinic-gallery img','.main-clinic-gallery');
+    //Mini clinic slider
+    $('.mini-clinic-slider').slick({
+        lazyLoad: 'progressive',
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        prevArrow: '<span class="fas fa-chevron-left mini-clinic-btn mini-clinic-btn-left"></span>',
+        nextArrow: '<span class="fas fa-chevron-right mini-clinic-btn mini-clinic-btn-right"></span>'
+    });
+    //Слайдер клиники
+    $('.clinic-slider').slick({
+        lazyLoad: 'progressive',
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll:3,
+        prevArrow: '<span class="fas fa-chevron-left slider-btn slider-btn-left"></span>',
+        nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>',
+        responsive: [
+            {
+                breakpoint: 830,
+                settings:{
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 446,
+                settings:{
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
+    //Слайдер врачей в About
+    if($(window).width()<=483){
+        $('.about-doctors-list').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll:1,
+            prevArrow: '<span class="fas fa-chevron-left slider-btn slider-btn-left"></span>',
+            nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>',
+        })
+    }else{
+        $('.about-doctors-list').filter('.slick-initialized').slick('unslick');
+    }
+    $(window).resize(function () {
+        if($(window).width()<=483){
+            $('.about-doctors-list').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll:1,
+                prevArrow: '<span class="fas fa-chevron-left slider-btn slider-btn-left"></span>',
+                nextArrow: '<span class="fas fa-chevron-right slider-btn  slider-btn-right"></span>',
+            })
+        }else{
+            $('.about-doctors-list').filter('.slick-initialized').slick('unslick');
+        }
+    });
 });
 

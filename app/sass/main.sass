@@ -52,13 +52,19 @@ body
   a:active
     color: #ececec
   blockquote
-    margin-left: auto
-    margin-right: auto
-    padding: 13px 20px
-    font-style: italic
-    border-left: 5px solid #F93A3A
-    background-color: #FAFAFA
-    max-width: 662px
+    background: #FAFAFF
+    border-radius: 10px
+    border: 0
+    padding: 30px
+    color: #000000
+    font-size: 16px
+    margin: 0
+    &::before
+      content: '”'
+      color: #8888D3
+      font-size: 48px
+      display: block
+      line-height: 25px
   section
     padding-bottom: 50px !important
   p
@@ -161,8 +167,8 @@ img
     box-shadow: 0 0 10px 5px #e4e1e1 !important
     border: none !important
   .custom-form-submit
-    padding-right: 10px
-    padding-left: 10px
+    padding-right: 30px
+    padding-left: 30px
 .custom-form-checkbox-container
   [type=checkbox].filled-in:checked+span:not(.lever):after
     background-color: $light-purple
@@ -1446,6 +1452,7 @@ img
   margin-bottom: 30px
 .blog-title
   font-size: 36px
+  margin: 50px 0
 .blog-more,.blog-time,.blog-date
   margin-right: 50px
 .blog-more
@@ -1463,5 +1470,121 @@ img
     left: 0
 .blog-time,.blog-date
   color: #000000
-
+//About
+.about-clinic
+  grid-gap: 30px
+  grid-template-columns: 2fr 1fr
+.stat-number
+  display: block
+  color: #D4E1F4
+  font-weight: bold
+  font-size: 64px
+  line-height: 24px
+  margin-bottom: 20px
+  text-align: center
+.about-clinic-stat-item:first-of-type
+  margin-bottom: 45px
+.stat-text
+  text-align: center
+  display: block
+//Clinic gallery
+.clinic-gallery
+  grid-gap: 30px
+  grid-template-columns: 2fr 1fr
+.main-clinic-gallery
+  border-radius: 10px
+  overflow: hidden
+  img
+    width: 100%
+    object-fit: cover
+    height: 100%
+.mini-clinic-gallery
+  grid-template-columns: 1fr 1fr
+  grid-gap: 30px
+  img
+    width: 100%
+    object-fit: cover
+    border-radius: 10px
+    cursor: pointer
+.clinic-gallery,.clinic-slider-container
+  margin-bottom: 50px
+//More info
+.more-info-clinic
+  grid-gap: 30px
+  grid-template-columns: repeat(3,1fr)
+.more-info-clinic-item
+  max-width: 420px
+  blockquote
+    height: 100%
+.mini-clinic-slider
+  position: relative
+  .slick-dots
+    position: absolute
+    width: 100%
+    bottom: 9px
+    display: flex
+    justify-content: center
+    li
+      width: 10px
+      height: 10px
+      border: 1px solid #D4E1F4
+      border-radius: 50%
+      font-size: 0
+      cursor: pointer
+      margin-right: 6px
+.mini-clinic-btn
+  position: absolute
+  top: 45%
+  color: #8888D3
+  font-size: 20px
+  cursor: pointer
+  z-index: 1
+.mini-clinic-btn-left
+  left: 18px
+.mini-clinic-btn-right
+  right: 18px
+.mini-clinic-slider-item
+  border-radius: 10px
+  overflow: hidden
+  img
+    width: 100%
+    object-fit: cover
+//Clinic slider
+.clinic-slider
+  .slider-btn
+    top: 45%
+.clinic-slider-item
+  border-radius: 10px
+  overflow: hidden
+  padding: 0 15px
+  img
+    width: 100%
+    object-fit: cover
+//About tech
+.about-us-tech,.about-us-info
+  .subtitle
+    margin-top: 0
+.about-us-info
+  padding-top: 50px
+  background: #FAFAFF
+//Online Form
+.online-form
+  background-color:  #FAFAFF
+  padding-top: 1px
+  .subtitle
+    text-align: left
+    font-size: 24px
+    margin-bottom: 100px
+    &::after
+      margin: 0
+      position: absolute
+      top: 45%
+      left: -4%
+  .form-date-submit-container
+    justify-content: flex-start
+    align-items: center
+    .custom-form-submit
+      margin-right: 30px
+    .custom-form-checkbox-container label
+      margin-bottom: 0
 @import 'media'

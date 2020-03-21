@@ -155,52 +155,45 @@
 	</div>
 </header>
 <main id="main">
-	<!-- Шапка страницы -->
-	<header class="container">
-		<h1 class="blog-title">Стоматологическая помощь в сахалинских селах становится доступнее
-		</h1>
-	</header>
-    <!-- Информация о записи -->
-	<div class="container flex-container blog-info">
-		<a href="#" class="blog-more">Все услуги</a>
-		<span class="blog-time">12:37</span>
-		<time class="blog-date">22 января 2020</time>
-	</div>
-	<!-- Запись блога -->
-	<section class="container blog-content">
-		<p>В Сахалинской области заработают 10 новых передвижных стоматологических комплексов. Специальные машины приобрели за счет областного бюджета в конце прошлого года. Их передали районным больницам Холмского, Долинского, Анивского, Охинского, Поронайского, Углегорского, Смирныховского, Томаринского, Тымовского и Курильского районов. В ближайшие месяцы передвижные стоматологии отправятся в села островного региона.</p>
-	    <p>Комплексы помогают сделать медицинскую помощь доступной в тех населенных пунктах, которые не имеют стационарных зубных кабинетов.</p>
-		<img src="img/_src/blog/item.jpg" alt="item">
-		<p>Накануне такая машина прибыла в Новиково — самое отдаленное село Корсаковского района. Передвижной модуль оснащен современным оборудованием и медикаментами. С их помощью специалисты на месте проводят диагностику, лечение и профилактику заболеваний зубов.</p>
-		<p>— Работа передвижного стоматологического кабинета расписана на год вперед, — рассказала заведующая стоматологической поликлиникой Корсакова Юлия Ким.</p>
-		<p>— Новиково — уже второй в этом году населенный пункт, где принимают наши врачи. Стоматологическая помощь здесь востребована всегда. Благодаря работе выездной бригады, больным не нужно тратить время и деньги на поездки в райцентр.</p>
-		<p>Мобильный стоматологический кабинет по селам южного Сахалина колесит уже четвертый год. За это время от зубной боли избавили почти 5,5 тысячи человек. Только в прошлом году передвижной комплекс посетили свыше 1,5 тысячи островитян.</p>
-		<p>— В день мы принимаем 10-12 человек, — говорит зубной врач Сергей Юн. — Среди наших пациентов есть и взрослые, и дети. Единственное отличие кабинета от стационарного — он мобильный. Это позволяет оказывать медпомощь даже в самых удаленных населенных пунктах. В каждом селе работаем по одной-две недели.</p>
-		<p>Житель села Новиково Николай Васильевич — один из постоянных пациентов стоматологии на колесах. На этот раз сахалинец обратился с жалобой на боль сразу в двух зубах.</p>
-		<p>— Сергей Юн — доктор с большой буквы, — говорит мужчина. — Лечит зубы быстро и качественно. И в общем человек хороший. Если пациент нервничает, обязательно поговорит, успокоит. Откровенно говоря, стоматологов побаиваюсь, но этому врачу полностью доверяю.</p>
-		<p>Стоматология на колесах продолжит работу в селе Новиково до конца января. В феврале стоматологический десант будут ждать в селе Дачное. На очереди — Чапаево и Охотское.</p>
-		<p>Отметим, сейчас в Сахалинской области работают два мобильных комплекса стоматологической помощи. Один из них курсирует по южным районам области. Вторая спецмашина закреплена за Александровск-Сахалинской ЦРБ. С пополнением автопарка передвижных зубных кабинетов до 12 машин медицинская помощь в селах области уже с первого квартала этого года станет еще доступнее, сообщает ИА Sakh.com со ссылкой на пресс-службу ПСО.</p>
-	</section>
-	<!-- Форма обратной связи -->
-	<section class="bottom-lead-form">
-		<div class="container">
-			<h3 class="bottom-lead-form-title">Мы всегда ответим на любые вопросы!</h3>
-			<p class="bottom-lead-form-text">Звоните по тел.: <a href="tel:88002348668">8 800 234-86-68</a>, или заполните форму заявки (мы перезвоним вам):</p>
-			<div class="custom-form bottom-lead-form-container">
-				<div class="grid-container bottom-lead-form-inputs">
-					<input type="text" class="custom-form-input" placeholder="Ваше имя" required>
-					<input type="tel" class="custom-form-input telephone" placeholder="+7(___)___-__-__" required>
-					<button type="submit" class="btn-purple btn-submit custom-form-submit">Перезвоните мне!</button>
+<section class="online-form">
+	<div class="container">
+		<h2 class="subtitle"><strong>Запишитесь</strong> на прием</h2>
+		<div class="custom-form form-date">
+			<div class="flex-container  form-date-inputs-container">
+				<div class="form-date-inputs">
+					<label for="form-date-name">Ваше имя</label>
+					<input type="text" class="custom-form-input" id="form-date-name" placeholder="Иван Иванов">
 				</div>
+				<div class="form-date-inputs">
+					<label for="form-date-tel">Номер вашего телефона</label>
+					<input type="tel" class="custom-form-input telephone" id="form-date-tel" placeholder="+7(___)___-__-__">
+				</div>
+			</div>
+			<div class="flex-container custom-form form-date-inputs-container">
+				<div class="form-date-inputs">
+					<label for="form-date">Желаемая дата</label>
+					<input type="text" class="custom-form-input date" id="form-date" placeholder="Выберите дату">
+				</div>
+				<div class="form-date-inputs time">
+					<label for="form-date-time">Желамое время</label>
+					<input type="tel" class="custom-form-input telephone" id="form-date-time" placeholder="00:00">
+					<span class="fas fa-chevron-left time-btn time-left"></span>
+					<span class="fas fa-chevron-right time-btn time-right"></span>
+				</div>
+			</div>
+			<div class="flex-container custom-form form-date-submit-container">
+				<button type="submit" class="btn-purple btn-submit custom-form-submit">Записаться на консультацию</button>
 				<div class="custom-form-checkbox-container">
 					<label>
-						<input type="checkbox" class="filled-in" checked="checked" />
-						<span>Я принимаю условия Пользовательского соглашения и даю своё согласие на обработку моей персональной информации на условиях, определённых Политикой конфиденциальности.</span>
+						<input type="checkbox" class="filled-in" checked="checked" required />
+						<span>Согласен с политикой конфиденциальности</span>
 					</label>
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+
+</section>
 </main>
 <footer id="footer">
 	<div class="container grid-container">
