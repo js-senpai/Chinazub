@@ -1390,4 +1390,49 @@ img
   justify-content: flex-start
   .header-contacts-item
     justify-content: flex-start
+//News
+.news-list-container
+  grid-template-columns: 1fr 1fr
+.news-list-item,.news-list-container
+  grid-gap: 30px
+.news-list-item
+  grid-template-columns: 1.2fr 2fr
+.news-img
+  border-radius: 10px
+  overflow: hidden
+  img
+    object-fit: cover
+    display: block
+    width: 100%
+.news-title
+  margin-top: 0
+  color: #000000
+  margin-bottom: 19px
+.news-except
+  color: #333333
+  margin-bottom: 23px
+.news-more-container
+  justify-content: flex-start
+  align-items: center
+  color: #5E60A3
+.news-more-icon
+  width: 20px
+  height: 20px
+  font-size: 8px
+  line-height: 16px
+  margin-right: 11px
+.news-pagination
+  margin-top: 70px
+  justify-content: flex-start
+.news-pagination-item
+  width: 30px
+  height: 30px
+  border-radius: 5px
+  background: linear-gradient(180deg, #8888D3 0%, #5E60A3 100%)
+  text-align: center
+  line-height: 30px
+  color: $white
+  margin-right: 15px
+  a
+    color: $white
 @import 'media'

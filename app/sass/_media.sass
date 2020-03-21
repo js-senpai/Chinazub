@@ -106,11 +106,13 @@
       max-height: 135px
       height: 100%
       object-fit: cover
-
   .contact-socials-list
     justify-content: flex-start
     .social-menu-item
       margin-right: 20px
+  //News container
+  .news-list-container
+    grid-template-columns: 1fr
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
   body section
@@ -431,6 +433,9 @@
     flex-wrap: wrap
     .header-contacts-item
       margin-bottom: 30px
+  //News
+  .news-list-item
+    grid-template-columns: 1fr
 /* Extra Small Devices, Phones */
 @media (max-width: 483px)
   .lead-banner-info-doctor
