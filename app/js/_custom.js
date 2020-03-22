@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 1500);
         });
     };
+    if($('#main').hasClass('isSingle')){
+      $('#header').addClass('single-header');
+    }
     //Маска для телефона
     $('.custom-form-input.telephone').mask('+7(000)00-00-00');
     // Календарь
