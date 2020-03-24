@@ -359,6 +359,12 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.about-doctors-list').filter('.slick-initialized').slick('unslick');
         }
     });
-
+    //Read more
+    $('.seo-block-container').readmore({
+        speed: 75,
+        lessLink: '<a href="#" class="btn-purple btn-submit seo-more">Закрыть</a>',
+        moreLink: '<a href="#" class="btn-purple btn-submit seo-more">Читать далее</a>',
+        heightMargin: 400
+    });
 });
 
