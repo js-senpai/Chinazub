@@ -118,6 +118,28 @@ document.addEventListener("DOMContentLoaded", function() {
         ]
     });
     // Слайдер сертификатов
+    //инициализируем галерею ДО запуска слайдера
+    const gallery = $('.cerfiticates-slider-item a');
+    //при клике на ссылку в слайде запускаем галерею
+    gallery.on('click', function(e) {
+        //узнаём индекс слайда без учёта клонов
+        var totalSlides = +$(this).parents('.certificates-slider').slick("getSlick").slideCount,
+            dataIndex = +$(this).parents('.slide').data('slick-index'),
+            trueIndex;
+        switch(true){
+            case (dataIndex<0):
+                trueIndex = totalSlides+dataIndex; break;
+            case (dataIndex>=totalSlides):
+                trueIndex = dataIndex%totalSlides; break;
+            default:
+                trueIndex = dataIndex;
+        }
+        //вызывается элемент галереи, соответствующий индексу слайда
+        $.fancybox.open(gallery,{helpers: {
+                buttons	: {}
+            }}, trueIndex);
+        return false;
+    });
     $('.certificates-slider').slick({
         lazyLoad: 'progressive',
         infinite: true,
@@ -337,5 +359,6 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.about-doctors-list').filter('.slick-initialized').slick('unslick');
         }
     });
+
 });
 
