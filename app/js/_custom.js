@@ -49,31 +49,34 @@ document.addEventListener("DOMContentLoaded", function() {
     (function(){
         if (!document.getElementsByClassName) {
             // Поддержка IE8
-            var getElementsByClassName = function(node, classname) {
-                var a = [];
-                var re = new RegExp('(^| )'+classname+'( |$)');
-                var els = node.getElementsByTagName("*");
-                for(var i=0,j=els.length; i < j; i++)
+            const getElementsByClassName = function(node, classname) {
+                const a = [];
+                let re = new RegExp('(^| )'+classname+'( |$)');
+                let els = node.getElementsByTagName("*");
+                for(let i=0,j=els.length; i < j; i++)
                     if(re.test(els[i].className))a.push(els[i]);
                 return a;
-            }
+            };
             var videos = getElementsByClassName(document.body,"youtube");
         } else {
             var videos = document.querySelectorAll(".youtube");
         }
-        var nb_videos = videos.length;
+        let nb_videos = videos.length;
         for (let i=0; i < nb_videos; i++) {
             // Находим постер для видео, зная ID нашего видео
-            videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].dataset.youtube + '/sddefault.jpg)';
+            if(videos[i].getAttribute('data-youtube-img') !== ''){
+                videos[i].style.backgroundImage = 'url(' + videos[i].getAttribute('data-youtube-img') + ')';
+            }else {
+                videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].dataset.youtube + '/sddefault.jpg)';
+            }
             // Размещаем над постером кнопку Play, чтобы создать эффект плеера
             var play = document.createElement("div");
             play.setAttribute("class","play");
             videos[i].appendChild(play);
             videos[i].onclick = function() {
                 // Создаем iFrame и сразу начинаем проигрывать видео, т.е. атрибут autoplay у видео в значении 1
-                var iframe = document.createElement("iframe");
-                console.log(videos[i])
-                var iframe_url = "https://www.youtube.com/embed/" + videos[i].dataset.youtube + "?autoplay=1&autohide=1";
+                const iframe = document.createElement("iframe");
+                let iframe_url = "https://www.youtube.com/embed/" + videos[i].dataset.youtube + "?autoplay=1&autohide=1";
                 if (this.getAttribute("data-params")) iframe_url+='&'+this.getAttribute("data-params");
                 iframe.setAttribute("src",iframe_url);
                 iframe.setAttribute("frameborder",'0');
