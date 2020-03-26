@@ -360,11 +360,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
     //Read more
-    $('.seo-block-container').readmore({
-        speed: 75,
-        lessLink: '<a href="#" class="btn-purple btn-submit seo-more">Закрыть</a>',
-        moreLink: '<a href="#" class="btn-purple btn-submit seo-more">Читать далее</a>',
-        heightMargin: 400
-    });
+    if($('.seo-block-container')) {
+        $('.seo-block-container').readmore({
+            speed: 75,
+            lessLink: '<a href="#" class="btn-purple btn-submit seo-more">Закрыть</a>',
+            moreLink: '<a href="#" class="btn-purple btn-submit seo-more">Читать далее</a>',
+            heightMargin: 400
+        });
+    }
+    if($('.bottom-lead-form-text a').text() == ''){
+        const numberText = $('.header-contacts .header-contacts-item.graphic a').text(),
+              numberLink = $('.header-contacts .header-contacts-item.graphic a').attr('href');
+        $('.bottom-lead-form-text a').text(numberText).attr('href',numberLink);
+    }
+    //Функция обработки формы
+    $('.wpcf7').on('wpcf7mailsent',function(){
+        $(this).fadeOut('slow');
+        $(this).parent().parent().find('.form-date-thx').fadeIn('slow');
+    })
 });
 
