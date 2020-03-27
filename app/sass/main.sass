@@ -992,6 +992,7 @@ img
 .service-gallery-list
   grid-template-columns: repeat(4,1fr)
   grid-gap: 30px
+  margin-bottom: 30px
 .service-gallery-button
   display: block
   width: auto
@@ -1236,8 +1237,6 @@ img
   color: #5E60A3
   font-size: 18px
   margin-top: 0
-.char-list-review-item
-  cursor: pointer
 .price-items-price
   text-align: right
 .mobile-price
@@ -1272,6 +1271,8 @@ img
 .reviews
   .review-container
     margin-bottom: 75px
+  .alm-btn-wrap
+    display: none
 //Contact
 .contact
   grid-column-gap: 50px
@@ -1413,8 +1414,17 @@ img
   .header-contacts-item
     justify-content: flex-start
 //News
+.news-list
+  .alm-load-more-btn
+    width: 320px
+    margin: 30px auto 0 auto
+  .alm-load-more-btn:disabled
+    background: #929292
+    color: $white
+    cursor: not-allowed
 .news-list-container
   grid-template-columns: 1fr 1fr
+  margin-bottom: 30px
 .news-list-item,.news-list-container
   grid-gap: 30px
 .news-list-item
@@ -1422,6 +1432,7 @@ img
 .news-img
   border-radius: 10px
   overflow: hidden
+  max-height: 154px
   img
     object-fit: cover
     display: block
@@ -1430,6 +1441,12 @@ img
   margin-top: 0
   color: #000000
   margin-bottom: 19px
+  font-family: HelveticaNeueCyr
+  font-style: normal
+  font-weight: bold
+  font-size: 18px
+  line-height: 24px
+  letter-spacing: 0.02em
 .news-except
   color: #333333
   margin-bottom: 23px
@@ -1562,6 +1579,7 @@ img
 .mini-clinic-slider-item
   border-radius: 10px
   overflow: hidden
+  max-height: 250px
   img
     width: 100%
     object-fit: cover
@@ -1573,6 +1591,7 @@ img
   border-radius: 10px
   overflow: hidden
   padding: 0 15px
+  max-height: 285px
   img
     width: 100%
     object-fit: cover
