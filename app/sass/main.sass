@@ -22,6 +22,9 @@ input, textarea
   padding: 0
 ul
   list-style-type: none
+ul:not([class])
+  padding-left: 45px
+  margin-bottom: 30px
 button
   @include reset-button
   cursor: pointer
@@ -48,9 +51,9 @@ body
   a
     color: #565656
   a:hover
-    color: #ececec
+    color: #28cdff
   a:active
-    color: #ececec
+    color: #28cdff
   blockquote
     background: #FAFAFF
     border-radius: 10px
@@ -69,15 +72,22 @@ body
     padding-bottom: 50px !important
   p
     margin-bottom: 30px
+//Titles
+.h3-title
+  margin: 1.9466666667rem 0 1.168rem 0
+.h4-title
+  margin: 1.52rem 0 .912rem 0
+.h5-title
+  margin: 1.0933333333rem 0 .656rem 0
 h1
   @include font(bold,36px,36px)
 h2
   @include font(bold,36px,40px)
-h3
+h3,.h3-title
   @include font(bold,24px,24px)
-h4
+h4,.h4-title
   @include font(bold,18px,18px)
-h5
+h5,.h5-title
   @include font(normal,12px,12px)
 img
   max-width: 100%
@@ -393,6 +403,8 @@ img
   align-items: center
 .nav-menu-item,.submenu-item
   border-bottom: 1px solid #6D6FB3
+.nav-menu-item.toggle
+  cursor: pointer
 .open-submenu
   font-size: 13px
   cursor: pointer
@@ -860,6 +872,7 @@ img
   border-radius: 30px
   max-width: 320px
   overflow: hidden
+  position: relative
   .custom-popup-header,.custom-form
     padding-left: 30px
     padding-right: 30px
@@ -868,14 +881,25 @@ img
   .checkbox-text
     font-size: 10px !important
   .custom-form
-    padding-top: 35px
-    padding-bottom: 40px
+    padding-top: 20px
+    padding-bottom: 20px
   .form-popup-inputs
     margin-bottom: 30px
   .custom-form-submit
     margin-right: 0
     width: 100%
     margin-bottom: 40px
+.close-popup
+  position: absolute
+  top: 15px
+  right: 10px
+  display: block
+  width: 20px
+  height: 20px
+  cursor: pointer
+  z-index: 1
+  text-align: center
+  line-height: 20px
 .custom-popup-header
   background: #FAFAFA
   padding-top: 30px
@@ -993,6 +1017,8 @@ img
   grid-template-columns: repeat(4,1fr)
   grid-gap: 30px
   margin-bottom: 30px
+  a:hover
+    color: $white
 .service-gallery-button
   display: block
   width: auto
@@ -1233,6 +1259,13 @@ img
 .char-list-review
   grid-template-columns: repeat(5,1fr)
   margin-bottom: 5px
+.char-list-review-item
+  width: 20px
+  height: 20px
+.char-list-review-item.tooth-active
+  background: center/100% no-repeat url('../img/icons/tooth-active.svg')
+.char-list-review-item.tooth-deactive
+  background: center/100% no-repeat url('../img/icons/tooth-deactive.svg')
 .price-items-title
   color: #5E60A3
   font-size: 18px
@@ -1628,4 +1661,12 @@ img
 .seo-more
   margin: 20px auto 0 auto
   max-width: 320px
+//Not found
+.not-found
+  text-align: center
+  .title
+    font-size: 10em
+  .btn-submit
+    max-width: 320px
+    margin: 0 auto
 @import 'media'

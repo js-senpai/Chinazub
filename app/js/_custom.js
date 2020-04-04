@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
       $('#header').addClass('single-header');
     }
     //Маска для телефона
-    $('.custom-form-input.telephone').mask('+7(000)00-00-00');
+    $('.custom-form-input.telephone').mask('+7(000)000-00-00');
+    //Маска для времени
+    $('#form-date-time').mask('00:00');
     // Календарь
     const date = new Date(),
           year = date.getFullYear(),
@@ -178,29 +180,6 @@ document.addEventListener("DOMContentLoaded", function() {
             },
         ]
     });
-    // Слайдер сертификатов
-    //инициализируем галерею ДО запуска слайдера
-    const gallery = $('.cerfiticates-slider-item a');
-    //при клике на ссылку в слайде запускаем галерею
-    gallery.on('click', function(e) {
-        //узнаём индекс слайда без учёта клонов
-        var totalSlides = +$(this).parents('.certificates-slider').slick("getSlick").slideCount,
-            dataIndex = +$(this).parents('.slide').data('slick-index'),
-            trueIndex;
-        switch(true){
-            case (dataIndex<0):
-                trueIndex = totalSlides+dataIndex; break;
-            case (dataIndex>=totalSlides):
-                trueIndex = dataIndex%totalSlides; break;
-            default:
-                trueIndex = dataIndex;
-        }
-        //вызывается элемент галереи, соответствующий индексу слайда
-        $.fancybox.open(gallery,{helpers: {
-                buttons	: {}
-            }}, trueIndex);
-        return false;
-    });
     $('.certificates-slider').slick({
         lazyLoad: 'progressive',
         infinite: true,
@@ -237,6 +216,13 @@ document.addEventListener("DOMContentLoaded", function() {
         $('.toggle-menu').toggleClass('active');
         $('.header-nav').toggleClass('active');
     });
+    $(document).mouseup(function (e) {
+        const menu_container = $(".header-nav.active");
+        if (menu_container.has(e.target).length === 0){
+            menu_container.removeClass('active');
+            $('.toggle-menu').removeClass('active');
+        }
+    });
     //Обвертка меню другим родителем
     const submenu = $('.nav-menu-item .submenu');
     if(submenu){
@@ -258,6 +244,14 @@ document.addEventListener("DOMContentLoaded", function() {
             let currentTitle = $(this).siblings('a').text();
             $('.header-nav-title').text(currentTitle);
             $(this).siblings('.submenu-container').fadeIn('slow');
+        })
+    }
+    if($('.nav-menu-item.toggle')){
+        $('.nav-menu-item.toggle').click(function () {
+            $('.header-nav').addClass('active-submenu');
+            let currentTitle = $(this).children('a').text();
+            $('.header-nav-title').text(currentTitle);
+            $(this).children('.submenu-container').fadeIn('slow');
         })
     }
     // Закрыть подменю
@@ -312,6 +306,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if ($('.custom-popup').has(e.target).length === 0){
             popup_container.fadeOut('slow');
         }
+    });
+    $('.close-popup').click(function () {
+        popup_container.fadeOut('slow');
     });
     //Accordion
     $('.collapsible').collapsible();
@@ -438,6 +435,18 @@ document.addEventListener("DOMContentLoaded", function() {
     $('.wpcf7').on('wpcf7mailsent',function(){
         $(this).fadeOut('slow');
         $(this).parent().parent().find('.form-date-thx').fadeIn('slow');
-    })
+    });
+    // Установка характеристик
+    $('.char-list-review').each(function(){
+        let colStar = +$(this).attr('data-reviews');
+        let currentStar = colStar.toFixed(0);
+        if(currentStar != 0 && currentStar <= 5){
+            let currentItems = $(this).find('.char-list-review-item');
+            for(let i = 0;i<currentStar;i++){
+                currentItems[i].classList.remove('tooth-deactive');
+                currentItems[i].classList.add('tooth-active');
+            }
+        }
+    });
 });
 
