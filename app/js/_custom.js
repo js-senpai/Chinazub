@@ -250,14 +250,15 @@ const oldTitle = $('.header-nav-title').text();
 //         $('.nav-menu').css({'height':`${currentHeight}px`});
 //     })
 // }
-if($('.nav-menu-item.toggle')){
+if($('.nav-menu-item')){
+    $('.submenu').parent().parent().addClass('toggle')
     $('.nav-menu-item.toggle').click(function (e) {
         e.stopImmediatePropagation();
         $('.header-nav').addClass('active-submenu');
         let currentTitle = $(this).children('a').text();
         $('.header-nav-title').text(currentTitle);
         $(this).children('.submenu-container').fadeIn('slow');
-        let currentHeight = $(this).siblings('.submenu-container').find('.submenu').height();
+        let currentHeight = $(this).find('.submenu').height();
         $('.nav-menu').css({'height':`${currentHeight}px`});
     })
 }
