@@ -1081,7 +1081,7 @@ img
   display: none
 //Service reviews
 .review-container
-  grid-template-columns: 2fr 1fr
+  grid-template-columns: 3fr 1fr
   grid-column-gap: 30px
 .first-review-item
   overflow: hidden
@@ -1098,21 +1098,18 @@ img
 .review-city
   font-size: 18px
   margin-bottom: 40px
-#review
-  .review-container
-     display: block  
-     .first-review-item
-       height: 35rem
-     .mobile-review-info,.second-review-item
-       display: none  
 .second-review-item
-  .review-gallery
+  /*.review-gallery
     grid-template-columns: repeat(2,1fr)
-    grid-gap: 30px
+    grid-gap: 30px*/
   .review-gallery-item
     position: relative
     border-radius: 10px
     overflow: hidden
+    &:nth-child(2),&:last-child
+      display: none
+    &:not(:last-child)
+      margin-bottom: 1rem 
   .review-gallery-item:first-of-type::before,.review-gallery-item:nth-of-type(3)::before
     content: 'До'
     display: block

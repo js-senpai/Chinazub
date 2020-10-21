@@ -362,6 +362,9 @@ const mainGallery = (item,parent)=>{
             currentSrc = currentImage.attr('src'),
             oldSrc = currentImage.attr('src');
         mainImage.attr('src',currentSrc);
+        if(mainImage.parent('a')){
+            mainImage.parent('a').attr('href',currentSrc);
+        } 
         currentImage.attr('src',oldSrc);
     })
 };
