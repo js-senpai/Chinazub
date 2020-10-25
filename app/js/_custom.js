@@ -7,6 +7,16 @@ document.addEventListener("DOMContentLoaded", function() {
     elements_selector: ".lazy"
 });
 lazyLoadInstance.update();
+//Галлерея отзывов
+    const reviewsGallery = ()=>{
+        const reviewGallery = document.querySelectorAll('.review-gallery');
+        for(let i = 0;i<reviewGallery.length;i++){
+            reviewGallery[i].querySelectorAll('.review-gallery-item').forEach((item)=>{
+                item.setAttribute('data-fancybox',`gallery-${i}`)
+            })
+        }
+    }
+
 //Scroll
 const scrollTo = (elem,attr) => {
     $(elem).on("click", function () {
@@ -97,6 +107,9 @@ if($('.youtube')){
             openEffect	: 'none',
             closeEffect	: 'none'
         });
+        if($('.review-gallery')){
+             reviewsGallery(); 
+        }
         if($('.youtube')){
             $('.youtube').each(function () {
                 let youtube_url = $(this).attr('data-youtube');
@@ -461,6 +474,7 @@ $('.char-list-review').each(function(){
         }
     }
 });
+
     })(jQuery)
 });
 
